@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boffo's Fine Foods | Oakville</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --linen:    #F0E9DC;
+    --linen-dk: #E4D9C8;
+    --green:    #2D4A35;
+    --green-lt: #3D6347;
+    --brass:    #B8924A;
+    --brass-lt: #CDA96A;
+    --ink:      #1E1E1A;
+    --ink-mid:  #3A3A34;
+    --ink-lt:   #6B6B60;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--linen);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+/* ── NAV ── */
+.nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    height: 60px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    z-index: 999;
+}
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: .95rem;
+    letter-spacing: 2px;
+    color: var(--linen);
+    font-style: italic;
+}
+.nav-contact {
+    font-size: .75rem;
+    color: rgba(240,233,220,.6);
+    letter-spacing: .5px;
+    display: none;
+}
+@media (min-width: 700px) { .nav-contact { display: block; } }
+
+.burger {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.burger span {
+    width: 22px; height: 2px;
+    background: var(--linen);
+    display: block;
+}
+.side-menu {
+    position: fixed;
+    top: 0; left: -280px;
+    width: 280px; height: 100%;
+    background: var(--green);
+    padding: 80px 28px;
+    transition: left .3s;
+    z-index: 1000;
+}
+.side-menu.open { left: 0; }
+.side-menu .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--linen);
+    margin-bottom: 32px;
+    display: block;
+    text-align: center;
+}
+.side-menu a {
+    display: block;
+    color: rgba(240,233,220,.75);
+    text-decoration: none;
+    font-size: .88rem;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(240,233,220,.12);
+    transition: color .2s;
+}
+.side-menu a:hover { color: var(--linen); }
+
+/* ── HERO ── */
+.hero {
+    margin-top: 60px;
+    min-height: 92vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+.hero-left {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 48px;
+    position: relative;
+}
+/* Kraft paper strip texture */
+.hero-left::after {
+    content: "";
+    position: absolute;
+    top: 0; right: -24px;
+    width: 48px; height: 100%;
+    background: var(--green);
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    z-index: 2;
+}
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(184,146,74,.18);
+    border: 1px solid rgba(184,146,74,.3);
+    border-radius: 2px;
+    padding: 5px 12px;
+    font-size: .68rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brass-lt);
+    margin-bottom: 28px;
+    width: fit-content;
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--linen);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+.hero h1 em {
+    font-style: italic;
+    color: var(--brass-lt);
+}
+.hero-desc {
+    font-size: .93rem;
+    color: rgba(240,233,220,.7);
+    line-height: 1.8;
+    max-width: 340px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+.hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.btn-primary {
+    background: var(--brass);
+    color: var(--ink);
+    padding: 12px 28px;
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background .2s;
+}
+.btn-primary:hover { background: var(--brass-lt); }
+.btn-ghost {
+    border: 1px solid rgba(240,233,220,.3);
+    color: var(--linen);
+    padding: 12px 28px;
+    font-size: .82rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: border-color .2s;
+}
+.btn-ghost:hover { border-color: rgba(240,233,220,.7); }
+
+.hero-right {
+    position: relative;
+    overflow: hidden;
+}
+.hero-right img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-right::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(45,74,53,.3), transparent);
+}
+
+/* ── KRAFT DIVIDER ── */
+.kraft-divider {
+    background: var(--linen-dk);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(30,30,26,.1);
+    border-bottom: 1px solid rgba(30,30,26,.1);
+}
+.kraft-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+}
+.kraft-icon {
+    width: 28px; height: 28px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    color: white;
+}
+
+/* ── ABOUT ── */
+.about-section {
+    padding: 90px 48px 90px 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+.about-label {
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 16px;
+    display: block;
+}
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--green);
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+.about-section p {
+    font-size: .93rem;
+    line-height: 1.85;
+    color: var(--ink-mid);
+    font-weight: 300;
+}
+.about-img-stack {
+    position: relative;
+    height: 380px;
+}
+.about-img-main {
+    position: absolute;
+    top: 0; right: 0;
+    width: 85%;
+    height: 300px;
+    background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80") center/cover;
+    border: 4px solid var(--linen);
+    box-shadow: 0 8px 30px rgba(30,30,26,.12);
+}
+.about-img-accent {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 55%;
+    height: 190px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+.about-img-accent p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--linen);
+    line-height: 1.5;
+}
+
+/* ── SERVICES ── */
+.services {
+    background: var(--green);
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.service-card {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 36px 40px;
+    text-decoration: none;
+}
+.service-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(.3) saturate(.7);
+    transition: filter .5s, transform .6s;
+}
+.service-card:hover .service-bg {
+    filter: brightness(.45) saturate(.9);
+    transform: scale(1.04);
+}
+.service-content { position: relative; z-index: 2; }
+.service-tag {
+    font-size: .65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brass-lt);
+    margin-bottom: 8px;
+    display: block;
+}
+.service-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--linen);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.service-content p {
+    font-size: .85rem;
+    color: rgba(240,233,220,.7);
+    line-height: 1.6;
+    max-width: 280px;
+}
+.service-arrow {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: .78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--brass-lt);
+    border-bottom: 1px solid var(--brass);
+    padding-bottom: 2px;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonial-section {
+    padding: 90px 48px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.testimonial-section .label {
+    font-size: .7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 32px;
+    display: block;
+}
+.testimonial-section blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-style: italic;
+    color: var(--green);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    transition: opacity .3s;
+}
+.t-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+.t-nav button {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--linen-dk);
+    cursor: pointer;
+    transition: background .2s;
+}
+.t-nav button.active { background: var(--brass); }
+
+/* ── HOURS ── */
+.info-section {
+    background: var(--linen-dk);
+    border-top: 1px solid rgba(30,30,26,.1);
+    border-bottom: 1px solid rgba(30,30,26,.1);
+    padding: 80px 48px;
+}
+.info-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+.info-divider { background: rgba(30,30,26,.1); }
+.info-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(30,30,26,.08);
+    font-size: .87rem;
+    color: var(--ink-mid);
+}
+.hours-row span:last-child { color: var(--ink); font-weight: 500; }
+.location-detail {
+    font-size: .9rem;
+    line-height: 1.9;
+    color: var(--ink-mid);
+}
+.location-detail strong { color: var(--green); font-weight: 500; }
+
+/* ── OWNER ── */
+.owner-section {
+    padding: 90px 48px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+.owner-photo {
+    width: 300px;
+    height: 400px;
+    background: url("https://boffos.net/wp-content/uploads/2018/08/Noel-Lourenco.jpg") center/cover;
+}
+.owner-text .label {
+    font-size: .7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brass);
+    display: block;
+    margin-bottom: 14px;
+}
+.owner-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--green);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.owner-text p {
+    font-size: .9rem;
+    line-height: 1.85;
+    color: var(--ink-mid);
+    margin-bottom: 14px;
+    font-weight: 300;
+}
+
+/* ── FOOTER ── */
+footer {
+    background: var(--green);
+    padding: 32px 24px;
+    text-align: center;
+}
+footer p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: .9rem;
+    color: rgba(240,233,220,.7);
+}
+footer strong { color: var(--linen); font-style: normal; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 60px 28px; }
+    .hero-left::after { display: none; }
+    .hero-right { height: 280px; }
+    .about-section { grid-template-columns: 1fr; gap: 40px; }
+    .about-img-stack { height: 280px; }
+    .services { grid-template-columns: 1fr; }
+    .service-card { height: 320px; }
+    .info-inner { grid-template-columns: 1fr; }
+    .info-divider { display: none; }
+    .owner-section { grid-template-columns: 1fr; }
+    .owner-photo { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <div class="nav-logo">Boffo's Fine Foods</div>
+    <div class="nav-contact">905-845-9303 · Kerr St, Oakville</div>
+</nav>
+
+<div class="side-menu" id="sideMenu">
+    <span class="logo">Boffo's</span>
+    <a href="#">About Us</a>
+    <a href="#">Prepared Meals & Catering</a>
+    <a href="#">Ready to Eat & Butcher's Shop</a>
+    <a href="#">Order Now</a>
+</div>
+
+<section class="hero">
+    <div class="hero-left">
+        <div class="hero-tag">Oakville's Fine Food Shop · Est. 2000</div>
+        <h1>Local.<br><em>Seasonal.</em><br>Made with care.</h1>
+        <p class="hero-desc">From the butcher counter to your dinner table — fresh cuts, prepared meals, and full catering from Oakville's most trusted neighbourhood deli.</p>
+        <div class="hero-btns">
+            <a href="#" class="btn-primary">View the Menu</a>
+            <a href="#" class="btn-ghost">Order Now</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80" alt="Fine food preparation">
+    </div>
+</section>
+
+<div class="kraft-divider">
+    <div class="kraft-item"><div class="kraft-icon">🌿</div>Local Farms</div>
+    <div class="kraft-item"><div class="kraft-icon">🥩</div>No Antibiotics</div>
+    <div class="kraft-item"><div class="kraft-icon">🍽️</div>Prepared Daily</div>
+    <div class="kraft-item"><div class="kraft-icon">🎉</div>Full Catering</div>
+</div>
+
+<section style="background:var(--linen);">
+    <div class="about-section">
+        <div>
+            <span class="about-label">Who We Are</span>
+            <h2>"Quality versus quantity — every single time."</h2>
+            <p>Boffo's Fine Foods has been a staple in Oakville for over a decade. We believe in simple, local ingredients and putting great meals on your table. Every cut of meat is selected from local farms where animals are raised humanely, free range, without antibiotics or hormones. Come taste the difference.</p>
+        </div>
+        <div class="about-img-stack">
+            <div class="about-img-main"></div>
+            <div class="about-img-accent">
+                <p>"You will bear witness to the difference quality makes."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="services">
+    <a href="#" class="service-card">
+        <div class="service-bg" style="background-image:url('https://www.boneta.ca/wp-content/uploads/2023/12/prepared-meal.jpg')"></div>
+        <div class="service-content">
+            <span class="service-tag">Catering & Events</span>
+            <h3>Prepared Meals & Catering</h3>
+            <p>Home cooked meals and full event catering. Seasonal, local, made with love by our in-house team.</p>
+            <span class="service-arrow">Explore →</span>
+        </div>
+    </a>
+    <a href="#" class="service-card">
+        <div class="service-bg" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="service-content">
+            <span class="service-tag">Deli & Butcher</span>
+            <h3>Ready to Eat & Butcher's Shop</h3>
+            <p>Locally sourced meats, freshly prepared dishes, and everything you need for a great meal at home.</p>
+            <span class="service-arrow">Explore →</span>
+        </div>
+    </a>
+</div>
+
+<div class="testimonial-section">
+    <span class="label">What Customers Say</span>
+    <blockquote id="tQuote">"Love their frozen meals. The chicken pot pie and agnolotti are so flavourful. Will definitely keep shopping here."</blockquote>
+    <div class="t-nav" id="tNav"></div>
+</div>
+
+<section class="info-section">
+    <div class="info-inner">
+        <div class="info-col">
+            <h3>Hours</h3>
+            <div class="hours-row"><span>Monday</span><span>Closed</span></div>
+            <div class="hours-row"><span>Tuesday</span><span>11am – 6pm</span></div>
+            <div class="hours-row"><span>Wednesday</span><span>11am – 4pm</span></div>
+            <div class="hours-row"><span>Thursday</span><span>11am – 4pm</span></div>
+            <div class="hours-row"><span>Friday</span><span>11am – 6pm</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9am – 5pm</span></div>
+            <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-col">
+            <h3>Find Us</h3>
+            <div class="location-detail">
+                <strong>334 Kerr St</strong><br>
+                Oakville, ON · L6K 3B5<br><br>
+                <strong>Tel:</strong> 905-845-9303<br>
+                <strong>Email:</strong> boffosorders@gmail.com
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4790.306437565437!2d-79.68426122383426!3d43.443574771112786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b5cf72d079ee5%3A0xb292a67f96b71807!2sBoffo%E2%80%99s%20Fine%20Foods!5e1!3m2!1sen!2sca!4v1781573609014!5m2!1sen!2sca"
+                width="100%" height="180" style="border:0; margin-top:16px;" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section style="background:var(--linen);">
+    <div class="owner-section">
+        <div class="owner-photo"></div>
+        <div class="owner-text">
+            <span class="label">Meet the Owner</span>
+            <h2>Over two decades of passion on a plate.</h2>
+            <p>When Ugo & Margherita first opened the Cabbage Town Butcher Shop in Toronto, they built something special on family and great staff. That same spirit lives on in Oakville under Noel Lourenco and Heather McGregor.</p>
+            <p>Under chef Noel's guidance — part of the Boffo's family since 2000 — we promise to keep producing tantalizing, local, seasonal dishes unlike anything else in the GTA.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 <strong>Boffo's Fine Foods</strong> · 334 Kerr St, Oakville, Ontario</p>
+</footer>
+
+<script>
+/* Burger */
+const sideMenu = document.getElementById("sideMenu");
+function toggleMenu(){ sideMenu.classList.toggle("open"); }
+document.addEventListener("click", e => {
+    if (!sideMenu.contains(e.target) && !e.target.closest(".burger")) sideMenu.classList.remove("open");
+});
+
+/* Testimonials */
+const quotes = [
+    "Love their frozen meals. The chicken pot pie and agnolotti are so flavourful. Will definitely keep shopping here.",
+    "Can't get fresher meat than this. Mom and Pop shop serving the community proud. The owners are extremely friendly.",
+    "Had Boffo cater our dinner — Beef Bourguignon, roasted veg, garlic mashed potatoes. Mouth-watering fantastic.",
+    "One of, if not THE, best steak sandwich I've ever had. From the people to their products, it's all wonderful.",
+    "Heather and Noel know almost every customer by name. Chicken soup that beats Mom's recipe.",
+    "A gem in Oakville. Always fresh and delicious. Cannot say enough good things. Must visit."
+];
+let qi = 0;
+const qEl = document.getElementById("tQuote");
+const tNav = document.getElementById("tNav");
+quotes.forEach((_, i) => {
+    const b = document.createElement("button");
+    if (i === 0) b.classList.add("active");
+    b.onclick = () => setQ(i);
+    tNav.appendChild(b);
+});
+function setQ(i){
+    qi = i;
+    qEl.style.opacity = 0;
+    setTimeout(() => { qEl.textContent = `"${quotes[i]}"`; qEl.style.opacity = 1; }, 250);
+    tNav.querySelectorAll("button").forEach((b,j) => b.classList.toggle("active", j===i));
+}
+setInterval(() => setQ((qi+1) % quotes.length), 5000);
+</script>
+</body>
+</html>
