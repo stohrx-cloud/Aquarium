@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planted Aquaria — Oakville Aquascaping &amp; Aquarium Specialists</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0F0E;
+    --ink-2: #0F1815;
+    --turq: #14B8A6;
+    --turq-dark: #0C8A7D;
+    --turq-light: #6FE9DA;
+    --mist: #E7F4F2;
+    --paper: #F5FBFA;
+    --text: #10201D;
+    --muted: #4C5C59;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--turq);
+    color: var(--ink);
+    padding: 0.75rem 1.25rem;
+    z-index: 1000;
+    border-radius: 0 0 8px 0;
+    font-weight: 600;
+  }
+  .skip-link:focus { left: 0; }
+
+  :focus-visible {
+    outline: 3px solid var(--turq);
+    outline-offset: 3px;
+  }
+
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 15, 14, 0.94);
+    backdrop-filter: blur(6px);
+    color: var(--paper);
+  }
+  .nav-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--paper);
+  }
+  .logo svg { width: 30px; height: 30px; }
+  nav.links {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  nav.links a {
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.2s;
+  }
+  nav.links a:hover { color: var(--turq-light); }
+  nav.links a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 0; height: 2px;
+    background: var(--turq);
+    transition: width 0.25s ease;
+  }
+  nav.links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--turq);
+    color: var(--ink);
+    padding: 0.55rem 1.15rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .nav-cta:hover { background: var(--turq-light); transform: translateY(-1px); }
+  .menu-toggle { display: none; background: none; border: none; color: var(--paper); font-size: 1.6rem; cursor: pointer; }
+
+  @media (max-width: 780px) {
+    nav.links { display: none; }
+    .menu-toggle { display: block; }
+    nav.links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--ink);
+      padding: 1.25rem 1.5rem;
+      gap: 1rem;
+    }
+  }
+
+  .hero {
+    position: relative;
+    height: min(88vh, 720px);
+    min-height: 480px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1FD9C4 0%, #0C8A7D 34%, #0A2B28 72%, #05100F 100%);
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .hero-tint {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,15,14,0.35) 0%, rgba(10,15,14,0.4) 55%, rgba(5,16,15,0.78) 100%);
+    z-index: 1;
+  }
+  #fishCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .hero-rays {
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(from 200deg at 30% -10%, rgba(255,255,255,0.14), rgba(255,255,255,0) 30%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    color: var(--paper);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    opacity: 0.85;
+    margin-bottom: 0.75rem;
+  }
+  .hero-content h1 {
+    color: white;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 1.04;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    max-width: 13ch;
+  }
+  .hero-content h1 span { color: var(--turq-light); font-style: italic; }
+  .hero-sub {
+    color: var(--paper);
+    font-size: 1.12rem;
+    max-width: 44ch;
+    margin-top: 1.1rem;
+    opacity: 0.92;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    pointer-events: all;
+    flex-wrap: wrap;
+  }
+  .btn-primary, .btn-ghost {
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.97rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .btn-primary { background: var(--turq); color: var(--ink); }
+  .btn-primary:hover { background: var(--turq-light); transform: translateY(-2px); }
+  .btn-ghost {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.5);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+  .hero-waterline {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30 Q 150 0 300 30 T 600 30 T 900 30 T 1200 30 V60 H0 Z' fill='%23E7F4F2'/%3E%3C/svg%3E") repeat-x;
+    background-size: 1200px 60px;
+  }
+
+  section { padding: 5rem 1.5rem; }
+  .section-inner { max-width: 1180px; margin: 0 auto; }
+  .section-head { max-width: 640px; margin-bottom: 2.75rem; }
+  .eyebrow {
+    display: inline-block;
+    color: var(--turq-dark);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-bottom: 0.6rem;
+  }
+  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); color: var(--ink); }
+  .section-head p { margin-top: 0.85rem; color: var(--muted); font-size: 1.05rem; }
+
+  /* trust badge strip */
+  .badge-strip { background: var(--mist); padding: 2.6rem 1.5rem; }
+  .badge-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .badge-item { display: flex; gap: 0.9rem; align-items: flex-start; }
+  .badge-item .icon {
+    width: 42px; height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .badge-item .icon svg { width: 22px; height: 22px; stroke: var(--turq-light); }
+  .badge-item h3 { font-size: 0.98rem; color: var(--ink); margin-bottom: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 700; }
+  .badge-item p { color: var(--muted); font-size: 0.85rem; }
+
+  @media (max-width: 900px) { .badge-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .badge-grid { grid-template-columns: 1fr; } }
+
+  .info-strip { background: var(--paper); padding: 4rem 1.5rem; }
+  .info-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .info-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 1.6rem 1.5rem;
+    box-shadow: 0 6px 24px rgba(10,15,14,0.06);
+    border: 1px solid rgba(10,15,14,0.05);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .info-card .icon {
+    width: 44px; height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--turq);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .info-card .icon svg { width: 24px; height: 24px; stroke: var(--ink); }
+  .info-card h3 { font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem; }
+  .info-card p { color: var(--muted); font-size: 0.92rem; }
+  .info-card .hours-row { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--muted); }
+
+  @media (max-width: 860px) { .info-grid { grid-template-columns: 1fr; } }
+
+  .about-wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .about-copy p { color: var(--text); font-size: 1.02rem; margin-bottom: 1.1rem; }
+  .tank-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: linear-gradient(160deg, #6FE9DA, #0A0F0E);
+    box-shadow: 0 20px 50px rgba(10,15,14,0.25), inset 0 0 60px rgba(255,255,255,0.08);
+  }
+  #miniTankCanvas { width: 100%; height: 100%; }
+
+  @media (max-width: 860px) { .about-wrap { grid-template-columns: 1fr; } }
+
+  .products-section { background: var(--white); }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+  .product-card {
+    background: var(--paper);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(10,15,14,0.06);
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(10,15,14,0.14); }
+  .product-media {
+    aspect-ratio: 5/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, #6FE9DA, #0A0F0E);
+  }
+  .product-media svg { width: 62%; height: 62%; }
+  .product-media img { width: 100%; height: 100%; object-fit: cover; }
+  .product-body { padding: 1.3rem 1.4rem 1.5rem; }
+  .product-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--turq-dark);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  .product-body h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 0.35rem; }
+  .product-body p { font-size: 0.9rem; color: var(--muted); }
+
+  @media (max-width: 860px) { .product-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+
+  .cta-band {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 4.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(20,184,166,0.22), transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(111,233,218,0.16), transparent 50%);
+  }
+  .cta-band-inner { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+  .cta-band h2 { color: white; font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 0.9rem; }
+  .cta-band p { opacity: 0.85; margin-bottom: 2rem; }
+
+  footer { background: #05100F; color: rgba(231,244,242,0.75); padding: 3rem 1.5rem 2rem; }
+  .footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .footer-brand {
+    font-family: 'Fraunces', serif;
+    color: var(--paper);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .footer-col h4 {
+    color: var(--paper);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8rem;
+  }
+  .footer-col a, .footer-col p { font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
+  .footer-col a:hover { color: var(--turq-light); }
+  .footer-bottom {
+    max-width: 1180px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(231,244,242,0.12);
+    font-size: 0.78rem;
+    text-align: center;
+    opacity: 0.6;
+  }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="Planted Aquaria home">
+      <span>Planted Aquaria</span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#about">Our Shop</a>
+      <a href="#products">Featured</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#visit" class="nav-cta">Get Directions</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="Welcome to Planted Aquaria">
+    <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" poster="https://images.unsplash.com/photo-1520302519690-73024294f860?auto=format&fit=crop&w=1600&q=80">
+      <source src="https://cdn.pixabay.com/video/2022/03/15/110879-689510470_large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-tint" aria-hidden="true"></div>
+    <div class="hero-rays" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">2350 Lakeshore Road West · Oakville, Ontario</p>
+      <h1>Aquascaping, done <span>properly.</span></h1>
+      <p class="hero-sub">Premium live plants, healthy tropical fish, and the equipment to support them — curated by people who keep planted tanks themselves.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">See what's thriving</a>
+        <a href="#visit" class="btn-ghost">Shop hours &amp; location</a>
+      </div>
+    </div>
+    <div class="hero-waterline" aria-hidden="true"></div>
+  </section>
+
+  <section class="badge-strip" aria-label="Why shop with us">
+    <div class="badge-grid">
+      <div class="badge-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div>
+          <h3>DOA Guaranteed</h3>
+          <p>Livestock &amp; plant protection</p>
+        </div>
+      </div>
+      <div class="badge-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
+        <div>
+          <h3>Speedy Shipping</h3>
+          <p>Express &amp; overnight delivery</p>
+        </div>
+      </div>
+      <div class="badge-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></div>
+        <div>
+          <h3>Trusted Expertise</h3>
+          <p>Real advice, seven days a week</p>
+        </div>
+      </div>
+      <div class="badge-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H7"/></svg></div>
+        <div>
+          <h3>Competitive Pricing</h3>
+          <p>Top value, honest cost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-strip" id="visit" aria-label="Visit information">
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Find us</h3>
+          <p>2350 Lakeshore Road West<br>Oakville, ON L6L 1H5</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <h3>Shop hours</h3>
+          <div class="hours-row"><span>Monday</span><span>11am – 3pm</span></div>
+          <div class="hours-row"><span>Tue – Sun</span><span>11am – 8pm</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5Z"/></svg>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <p>Questions about plants, livestock, or your setup — call, email, or drop by.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="About Planted Aquaria">
+    <div class="section-inner about-wrap">
+      <div class="about-copy">
+        <span class="eyebrow">Our Shop</span>
+        <h2>Oakville's aquarium &amp; aquascaping specialists since 2019</h2>
+        <p>Planted Aquaria was built to bring real aquascaping expertise to Oakville — no big-box guesswork. Every tank in the shop is planted, stocked, and watched by people who keep aquariums themselves.</p>
+        <p>We carry premium live aquatic plants, healthy tropical fish, and the hardscape, lighting, and CO2 equipment to support a proper planted setup, held to the same standard we'd want for our own tanks at home.</p>
+        <p>Come in, tell us what you're building, and we'll help you find the right plants, livestock, and gear for it.</p>
+      </div>
+      <div class="tank-frame">
+        <canvas id="miniTankCanvas" aria-label="Animated illustration of a planted aquarium tank"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section" id="products" aria-label="Featured products">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Featured</span>
+        <h2>What's thriving this week</h2>
+        <p>A rotating pick of what's looking best in the shop right now. Stock changes often — call ahead if you're chasing something specific.</p>
+      </div>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1643563459751-3f3584476de9?auto=format&fit=crop&w=800&q=80" alt="A school of neon tetra swimming in an aquarium">
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Live Fish</span>
+            <h3>Neon Tetra (school of 6)</h3>
+            <p>Peaceful, hardy, and endlessly bright — a great anchor school for a planted community tank.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1566128920247-b155c2e07f7d?auto=format&fit=crop&w=800&q=80" alt="A silver angelfish in an aquarium">
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Live Fish</span>
+            <h3>Silver Angelfish</h3>
+            <p>Graceful centerpiece fish for taller tanks. Calm temperament, striking in a planted setup.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1579967327980-2a4117da0e4a?auto=format&fit=crop&w=800&q=80" alt="A potted green Amazon Sword plant in a fish tank">
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Live Plants</span>
+            <h3>Amazon Sword (potted)</h3>
+            <p>Easy-care background plant that gives fry and shy fish plenty of cover.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1643563458878-2281f9287ae3?auto=format&fit=crop&w=800&q=80" alt="A golden yellow gourami swimming in an aquarium">
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Live Fish</span>
+            <h3>Honey Gourami</h3>
+            <p>A calm, colourful mid-water fish that gets along well in most community setups.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1711539137981-ddf32f60c77b?auto=format&fit=crop&w=800&q=80" alt="A set-up aquarium tank with plants and rocks">
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Hardware</span>
+            <h3>20-Gallon Starter Tank Kit</h3>
+            <p>Tank, filter, and lighting bundled for a first planted community setup.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="https://images.unsplash.com/photo-1553986187-9cb16fa33483?auto=format&fit=crop&w=800&q=80" alt="A male veiltail betta fish">
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Live Fish</span>
+            <h3>Betta (male, veiltail)</h3>
+            <p>Solo showpiece fish — keep alone or with calm, non-nippy tankmates.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-label="Visit the shop">
+    <div class="cta-band-inner">
+      <h2>See the aquascapes in person</h2>
+      <p>Photos only tell you so much. Stop by 2350 Lakeshore Road West and see what's actually thriving today.</p>
+      <a href="#visit" class="btn-primary">Plan your visit</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-brand">Planted Aquaria</span>
+      <p style="max-width:28ch; opacity:0.8;">Oakville's aquarium &amp; aquascaping specialists — live plants, healthy fish, and considered equipment since 2019.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <p>2350 Lakeshore Road West</p>
+      <p>Oakville, ON L6L 1H5</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Monday: 11am–3pm</p>
+      <p>Tue – Sun: 11am–8pm</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#about">Our Shop</a>
+      <a href="#products">Featured</a>
+      <a href="#visit">Visit Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Planted Aquaria. Concept redesign by STOHRX — not an official Planted Aquaria site.</div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', false);
+  }));
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  (function () {
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo && prefersReducedMotion) {
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.pause();
+    }
+  })();
+
+  (function () {
+    const canvas = document.getElementById('miniTankCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, DPR;
+
+    function resize() {
+      DPR = Math.min(window.devicePixelRatio || 1, 2);
+      W = canvas.clientWidth;
+      H = canvas.clientHeight;
+      canvas.width = W * DPR;
+      canvas.height = H * DPR;
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+    const ro = new ResizeObserver(resize);
+    ro.observe(canvas);
+    resize();
+
+    const palette = [
+      { body: '#1FD9C4', fin: '#0C8A7D' },
+      { body: '#05100F', fin: '#0A2B28' },
+      { body: '#FFFFFF', fin: '#BFEDE7' },
+    ];
+
+    function drawFishShape(ctx, len, bodyColor, finColor, tailPhase) {
+      const wag = Math.sin(tailPhase) * 0.35;
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(-len * 0.5, 0);
+      ctx.quadraticCurveTo(-len * 0.75, -len * 0.28 * (1 + wag), -len * 1.05, 0);
+      ctx.quadraticCurveTo(-len * 0.75, len * 0.28 * (1 - wag), -len * 0.5, 0);
+      ctx.fillStyle = finColor;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.ellipse(0, 0, len * 0.5, len * 0.28, 0, 0, Math.PI * 2);
+      ctx.fillStyle = bodyColor;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(len * 0.32, -len * 0.04, len * 0.055, 0, Math.PI * 2);
+      ctx.fillStyle = '#05100F';
+      ctx.fill();
+      ctx.restore();
+    }
+
+    const fishes = Array.from({ length: 4 }, (_, i) => ({
+      x: Math.random(),
+      y: 0.2 + Math.random() * 0.55,
+      len: 16 + Math.random() * 10,
+      speed: 0.0003 + Math.random() * 0.0003,
+      dir: Math.random() > 0.5 ? 1 : -1,
+      bob: Math.random() * Math.PI * 2,
+      tailPhase: Math.random() * Math.PI * 2,
+      color: palette[i % palette.length],
+    }));
+
+    function drawPlants() {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(63,220,151,0.55)';
+      ctx.lineWidth = 4;
+      ctx.lineCap = 'round';
+      for (let i = 0; i < 6; i++) {
+        const bx = (i / 5) * W;
+        ctx.beginPath();
+        ctx.moveTo(bx, H);
+        ctx.quadraticCurveTo(bx + Math.sin(Date.now() * 0.0006 + i) * 10, H - H * 0.35, bx + Math.sin(Date.now() * 0.0004 + i) * 6, H - H * 0.55);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    let t = 0;
+    function frame() {
+      t += 1;
+      ctx.clearRect(0, 0, W, H);
+      drawPlants();
+      fishes.forEach(f => {
+        f.x += f.speed * f.dir * (prefersReducedMotion ? 0 : 1);
+        if (f.x > 1.15) f.x = -0.15;
+        if (f.x < -0.15) f.x = 1.15;
+        f.tailPhase += 0.1;
+        const bobY = Math.sin(t * 0.02 + f.bob) * 6;
+        const px = f.x * W;
+        const py = f.y * H + bobY;
+        ctx.save();
+        ctx.translate(px, py);
+        ctx.scale(f.dir === 1 ? 1 : -1, 1);
+        drawFishShape(ctx, f.len, f.color.body, f.color.fin, f.tailPhase);
+        ctx.restore();
+      });
+      if (!prefersReducedMotion) requestAnimationFrame(frame);
+    }
+    frame();
+  })();
+</script>
+
+</body>
+</html>
