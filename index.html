@@ -3,769 +3,783 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planted Aquaria — Oakville Aquascaping &amp; Aquarium Specialists</title>
+<title>502 Urban Coffee — Bronte Village</title>
+<meta name="description" content="Small-batch Guatemalan coffee and fresh local pastries in Bronte Village, Oakville. Family-roasted, market-born, poured Tuesday through Saturday.">
+<meta name="theme-color" content="#17140f">
+<meta property="og:title" content="502 Urban Coffee — Bronte Village">
+<meta property="og:description" content="Small-batch Guatemalan coffee and fresh local pastries in Bronte Village, Oakville.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=1200&q=80">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4,3 L34,1 L61,4 L63,32 L60,60 L30,63 L2,60 L1,32 Z' fill='%2317140f'/%3E%3Ctext x='32' y='30' font-family='Georgia,serif' font-weight='700' font-size='17' fill='%23eee3cf' text-anchor='middle'%3E502%3C/text%3E%3Ctext x='32' y='47' font-family='Arial,sans-serif' font-weight='700' font-size='8' letter-spacing='1' fill='%232f8f8a' text-anchor='middle'%3EURBAN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #0A0F0E;
-    --ink-2: #0F1815;
-    --turq: #14B8A6;
-    --turq-dark: #0C8A7D;
-    --turq-light: #6FE9DA;
-    --mist: #E7F4F2;
-    --paper: #F5FBFA;
-    --text: #10201D;
-    --muted: #4C5C59;
-    --white: #FFFFFF;
+  :root{
+    --ink:#17140f;
+    --ink-soft:#2a231c;
+    --kraft:#eee3cf;
+    --kraft-2:#e3d2ac;
+    --roast:#4a2f22;
+    --roast-2:#33211a;
+    --roast-3:#1f130c;
+    --teal:#2f8f8a;
+    --teal-deep:#1c5a56;
+    --paper-line: rgba(23,20,15,0.16);
+    --shadow: 0 20px 40px -20px rgba(23,20,15,0.5);
+    --radius: 12px;
+    --radius-lg: 20px;
+
+    --clip-sq-40: path('M3,2 L22,0 L38,3 L40,20 L38,38 L20,40 L2,38 L0,19 Z');
+    --clip-sq-64: path('M4,3 L34,1 L61,4 L63,32 L60,60 L30,63 L2,60 L1,32 Z');
+    --clip-sq-150: path('M8,5 L78,2 L143,8 L147,74 L141,141 L72,147 L4,140 L2,70 Z');
+    --clip-blob-84: path('M42,3 C64,2 82,20 83,42 C84,64 66,82 44,83 C22,84 3,66 2,44 C1,22 20,4 42,3 Z');
+    --clip-blob-74: path('M37,3 C56,2 72,17 73,37 C74,56 59,72 39,73 C20,74 3,59 2,39 C1,20 18,4 37,3 Z');
+    --clip-blob-56: path('M28,2 C43,1 55,13 56,28 C57,43 45,55 30,56 C15,57 2,45 1,30 C0,15 13,3 28,2 Z');
+    --clip-blob-44: path('M22,2 C34,1 43,10 43,22 C44,34 35,43 23,43 C11,44 1,35 1,23 C0,11 10,2 22,2 Z');
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--kraft);
+    color:var(--ink);
+    font-family:'Archivo', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    line-height:1;
+    margin:0;
+    text-wrap:balance;
+  }
+  :focus-visible{
+    outline:2px solid var(--teal);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+  .skip-link{
+    position:absolute; left:16px; top:-60px;
+    background:var(--ink); color:var(--kraft); padding:12px 20px; border-radius:8px;
+    z-index:100; font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-decoration:none;
+    transition:top .2s ease;
+  }
+  .skip-link:focus{ top:16px; }
+  .grain{
+    position:fixed; inset:0; z-index:3; pointer-events:none;
+    opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  section{position:relative;}
+
+  /* ---------- Torn paper seam ---------- */
+  .seam{display:block; width:100%; height:22px; margin-bottom:-1px; position:relative; z-index:2;}
+  .seam svg{display:block; width:100%; height:100%;}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,227,207,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--paper-line);
+  }
+  .nav-inner{
+    max-width:1180px;margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);}
+  .brand .mark{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:800;
+    background:var(--ink); color:var(--kraft);
+    width:42px;height:42px;border-radius:10px;
+    clip-path:var(--clip-sq-40);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.05rem; flex-shrink:0;
+  }
+  .brand .word{font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:1.2rem; text-transform:uppercase; letter-spacing:0.01em;}
+  .brand .word small{display:block; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--roast); font-weight:500;}
+  nav.links{display:flex;gap:28px;align-items:center;}
+  nav.links a{
+    text-decoration:none;color:var(--ink);font-weight:600;font-size:0.86rem;
+    text-transform:uppercase; letter-spacing:0.04em;
+    position:relative; padding:4px 0;
+  }
+  nav.links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--teal);
+    transition:width .25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  nav.links a.active{color:var(--teal-deep);}
+  nav.links a.active::after{width:100%; background:var(--teal);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:10px;
+    font-weight:700;font-size:0.86rem;text-decoration:none;
+    text-transform:uppercase; letter-spacing:0.03em;
+    border:2px solid var(--ink); cursor:pointer;
+    transition:transform .15s cubic-bezier(.2,.8,.2,1), background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn-solid{background:var(--ink); color:var(--kraft);}
+  .btn-solid:hover{transform:translateY(-2px); background:var(--teal); border-color:var(--teal); color:var(--ink);}
+  .btn-ghost{background:transparent;color:var(--ink);}
+  .btn-ghost:hover{transform:translateY(-2px); background:var(--ink); color:var(--kraft);}
+  .btn:active{transform:scale(0.97);}
+  .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+  .mobile-menu a{
+    text-decoration:none; color:var(--ink); font-weight:600; font-size:0.95rem;
+    text-transform:uppercase; letter-spacing:0.03em;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--roast-3);
+    color:var(--kraft);
+    padding:88px 0 72px;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero-bg{
+    position:absolute; inset:0; z-index:0;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(100deg, rgba(31,19,12,0.94) 0%, rgba(31,19,12,0.82) 45%, rgba(31,19,12,0.6) 100%);
+  }
+  .marquee-row{flex:1; display:flex; gap:6px; overflow:hidden; min-height:0;}
+  .marquee-row img{
+    height:100%; width:auto; aspect-ratio:4/3; object-fit:cover; flex-shrink:0;
+    filter:grayscale(0.25) sepia(0.35) brightness(0.55) contrast(1.1);
+  }
+  .marquee-row.left{animation:marqueeLeft 60s linear infinite;}
+  .marquee-row.right{animation:marqueeRight 68s linear infinite;}
+  .marquee-row.left-slow{animation:marqueeLeft 78s linear infinite;}
+  @keyframes marqueeLeft{from{transform:translateX(0);} to{transform:translateX(-33.3333%);}}
+  @keyframes marqueeRight{from{transform:translateX(-33.3333%);} to{transform:translateX(0);}}
+  .hero .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    color:#cbb99f; margin-bottom:18px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);}
+  .hero h1{font-size:clamp(2.5rem, 4.8vw, 3.9rem); line-height:1.02; font-weight:800; color:var(--kraft); text-transform:none;}
+  .hero h1 em{font-style:normal; color:var(--teal); font-weight:400;}
+  .hero p.lead{margin-top:22px; max-width:46ch; color:#cbb99f; font-size:1.06rem; font-family:'Archivo',sans-serif;}
+  .hero .cta-row{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .hero .btn-solid{background:var(--teal); border-color:var(--teal); color:var(--ink);}
+  .hero .btn-solid:hover{background:var(--kraft); border-color:var(--kraft); color:var(--ink);}
+  .hero .btn-ghost{border-color:#5c4632; color:var(--kraft);}
+  .hero .btn-ghost:hover{background:var(--kraft); color:var(--ink); border-color:var(--kraft);}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--paper);
-    color: var(--text);
-    line-height: 1.5;
+  .photo-stack{position:relative; padding:14px 8% 46px 4%;}
+  .photo-card{
+    background:var(--kraft); padding:12px 12px 34px;
+    box-shadow:var(--shadow); border-radius:4px;
   }
-
-  h1, h2, h3, .display {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+  .photo-card img{
+    width:100%; aspect-ratio:1/1; object-fit:cover; display:block; border-radius:2px;
+    filter:sepia(0.12) saturate(1.05) contrast(1.03);
   }
-
-  a { color: inherit; text-decoration: none; }
-  img, svg { display: block; max-width: 100%; }
-
-  .skip-link {
-    position: absolute;
-    left: -999px;
-    top: 0;
-    background: var(--turq);
-    color: var(--ink);
-    padding: 0.75rem 1.25rem;
-    z-index: 1000;
-    border-radius: 0 0 8px 0;
-    font-weight: 600;
-  }
-  .skip-link:focus { left: 0; }
-
-  :focus-visible {
-    outline: 3px solid var(--turq);
-    outline-offset: 3px;
-  }
-
-  header.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(10, 15, 14, 0.94);
-    backdrop-filter: blur(6px);
-    color: var(--paper);
-  }
-  .nav-inner {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0.9rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--paper);
-  }
-  .logo svg { width: 30px; height: 30px; }
-  nav.links {
-    display: flex;
-    gap: 2rem;
-    font-weight: 600;
-    font-size: 0.92rem;
-  }
-  nav.links a {
-    position: relative;
-    padding: 0.25rem 0;
-    transition: color 0.2s;
-  }
-  nav.links a:hover { color: var(--turq-light); }
-  nav.links a::after {
-    content: '';
-    position: absolute;
-    left: 0; bottom: -2px;
-    width: 0; height: 2px;
-    background: var(--turq);
-    transition: width 0.25s ease;
-  }
-  nav.links a:hover::after { width: 100%; }
-  .nav-cta {
-    background: var(--turq);
-    color: var(--ink);
-    padding: 0.55rem 1.15rem;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    transition: background 0.2s, transform 0.2s;
-  }
-  .nav-cta:hover { background: var(--turq-light); transform: translateY(-1px); }
-  .menu-toggle { display: none; background: none; border: none; color: var(--paper); font-size: 1.6rem; cursor: pointer; }
-
-  @media (max-width: 780px) {
-    nav.links { display: none; }
-    .menu-toggle { display: block; }
-    nav.links.open {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 100%; left: 0; right: 0;
-      background: var(--ink);
-      padding: 1.25rem 1.5rem;
-      gap: 1rem;
-    }
+  .photo-card.card-a{width:74%; transform:rotate(-3deg); position:relative; z-index:2;}
+  .photo-card.card-b{width:52%; transform:rotate(6deg); position:absolute; right:0; bottom:0; z-index:1;}
+  .stamp-mini{
+    position:absolute; top:-4px; right:6%;
+    width:78px;height:78px;
+    clip-path:var(--clip-blob-74);
+    background:var(--ink); color:var(--teal);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:0.66rem; line-height:1.15;
+    text-transform:uppercase; letter-spacing:0.02em;
+    transform:rotate(-9deg);
+    box-shadow:var(--shadow);
+    border:1.5px solid var(--teal-deep);
+    z-index:3;
   }
 
-  .hero {
-    position: relative;
-    height: min(88vh, 720px);
-    min-height: 480px;
-    overflow: hidden;
-    background: linear-gradient(180deg, #1FD9C4 0%, #0C8A7D 34%, #0A2B28 72%, #05100F 100%);
-  }
-  .hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
-  .hero-tint {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(10,15,14,0.35) 0%, rgba(10,15,14,0.4) 55%, rgba(5,16,15,0.78) 100%);
-    z-index: 1;
-  }
-  #fishCanvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  .hero-rays {
-    position: absolute;
-    inset: 0;
-    background: conic-gradient(from 200deg at 30% -10%, rgba(255,255,255,0.14), rgba(255,255,255,0) 30%);
-    mix-blend-mode: screen;
-    pointer-events: none;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 5;
-    max-width: 1180px;
-    margin: 0 auto;
-    height: 100%;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    pointer-events: none;
-  }
-  .hero-eyebrow {
-    color: var(--paper);
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-size: 0.78rem;
-    opacity: 0.85;
-    margin-bottom: 0.75rem;
-  }
-  .hero-content h1 {
-    color: white;
-    font-size: clamp(2.4rem, 6vw, 4.4rem);
-    line-height: 1.04;
-    text-shadow: 0 4px 24px rgba(0,0,0,0.3);
-    max-width: 13ch;
-  }
-  .hero-content h1 span { color: var(--turq-light); font-style: italic; }
-  .hero-sub {
-    color: var(--paper);
-    font-size: 1.12rem;
-    max-width: 44ch;
-    margin-top: 1.1rem;
-    opacity: 0.92;
-  }
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    pointer-events: all;
-    flex-wrap: wrap;
-  }
-  .btn-primary, .btn-ghost {
-    padding: 0.85rem 1.6rem;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.97rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.2s, background 0.2s;
-  }
-  .btn-primary { background: var(--turq); color: var(--ink); }
-  .btn-primary:hover { background: var(--turq-light); transform: translateY(-2px); }
-  .btn-ghost {
-    background: rgba(255,255,255,0.1);
-    color: white;
-    border: 1.5px solid rgba(255,255,255,0.5);
-  }
-  .btn-ghost:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
 
-  .hero-waterline {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 60px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30 Q 150 0 300 30 T 600 30 T 900 30 T 1200 30 V60 H0 Z' fill='%23E7F4F2'/%3E%3C/svg%3E") repeat-x;
-    background-size: 1200px 60px;
-  }
+  /* ---------- Section shell ---------- */
+  .section{padding:84px 0 100px;}
+  .section.alt{background:var(--kraft-2);}
+  .kicker{display:flex; align-items:center; gap:12px; color:var(--roast); margin-bottom:16px;}
+  .kicker .rule{width:34px; height:2px; background:var(--roast);}
+  .section h2{font-size:clamp(2rem,3.4vw,2.7rem); max-width:18ch; text-transform:none;}
+  .section p.intro{max-width:60ch; color:#4a382e; margin-top:14px; font-size:1.02rem; font-family:'Archivo',sans-serif;}
 
-  section { padding: 5rem 1.5rem; }
-  .section-inner { max-width: 1180px; margin: 0 auto; }
-  .section-head { max-width: 640px; margin-bottom: 2.75rem; }
-  .eyebrow {
-    display: inline-block;
-    color: var(--turq-dark);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-size: 0.78rem;
-    margin-bottom: 0.6rem;
+  /* ---------- Origin route (signature) ---------- */
+  .route{
+    margin-top:60px; position:relative;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
   }
-  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); color: var(--ink); }
-  .section-head p { margin-top: 0.85rem; color: var(--muted); font-size: 1.05rem; }
+  .route::before{
+    content:""; position:absolute; top:37px; left:6%; right:6%; height:0;
+    border-top:2px dashed rgba(23,20,15,0.25);
+  }
+  .stop{position:relative; text-align:center; padding:0 14px;}
+  .stop-badge{
+    width:78px;height:78px;
+    clip-path:var(--clip-blob-74);
+    margin:0 auto 18px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--ink); color:var(--teal);
+    font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:1.4rem;
+    position:relative; z-index:2;
+    border:1.5px solid var(--teal-deep);
+  }
+  .stop:nth-child(odd) .stop-badge{transform:rotate(-6deg);}
+  .stop:nth-child(even) .stop-badge{transform:rotate(5deg);}
+  .stop .mono{color:#7a6a5b; margin-bottom:6px;}
+  .stop h3{font-size:1.15rem; margin-bottom:6px; text-transform:none; font-weight:700;}
+  .stop p{font-size:0.92rem; color:#5b493d; max-width:22ch; margin:0 auto; font-family:'Archivo',sans-serif;}
 
-  /* trust badge strip */
-  .badge-strip { background: var(--mist); padding: 2.6rem 1.5rem; }
-  .badge-grid {
-    max-width: 1180px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+  /* ---------- Menu ---------- */
+  .menu-grid{margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .drink-card{
+    background:var(--kraft); border:1px solid var(--paper-line); border-radius:var(--radius);
+    padding:0 0 26px; position:relative; overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
   }
-  .badge-item { display: flex; gap: 0.9rem; align-items: flex-start; }
-  .badge-item .icon {
-    width: 42px; height: 42px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: var(--ink);
-    display: flex; align-items: center; justify-content: center;
+  .drink-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .drink-card .photo{
+    width:100%; height:170px; overflow:hidden; position:relative;
   }
-  .badge-item .icon svg { width: 22px; height: 22px; stroke: var(--turq-light); }
-  .badge-item h3 { font-size: 0.98rem; color: var(--ink); margin-bottom: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 700; }
-  .badge-item p { color: var(--muted); font-size: 0.85rem; }
+  .drink-card .photo img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition:transform .4s ease; filter:sepia(0.12) saturate(1.05) contrast(1.03);
+  }
+  .drink-card:hover .photo img{transform:scale(1.06);}
+  .drink-card .card-body{padding:20px 24px 0;}
+  .monogram{
+    width:46px;height:46px;
+    clip-path:var(--clip-blob-44);
+    background:var(--ink); color:var(--kraft);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:1.1rem;
+    margin-bottom:16px;
+  }
+  .drink-card:nth-child(odd) .monogram{transform:rotate(-5deg);}
+  .drink-card:nth-child(even) .monogram{transform:rotate(4deg);}
+  .drink-card h3{font-size:1.2rem; margin-bottom:8px; text-transform:none; font-weight:700;}
+  .drink-card p{font-size:0.92rem; color:#5b493d; margin:0 0 16px; font-family:'Archivo',sans-serif;}
+  .tag-ticket{
+    display:inline-flex; align-items:center;
+    padding:5px 12px; border:1px dashed var(--roast); border-radius:999px;
+    color:var(--roast); font-size:0.68rem;
+  }
+  .drink-card:nth-child(odd) .tag-ticket{transform:rotate(-2deg);}
+  .drink-card:nth-child(even) .tag-ticket{transform:rotate(2deg);}
 
-  @media (max-width: 900px) { .badge-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .badge-grid { grid-template-columns: 1fr; } }
+  /* ---------- Brew guide ---------- */
+  .brew-tabs{display:flex; gap:10px; margin-top:48px; flex-wrap:wrap;}
+  .brew-tab{
+    padding:12px 20px; border-radius:10px; border:2px solid var(--paper-line);
+    background:transparent; font-family:'Archivo',sans-serif; font-weight:700; font-size:0.86rem;
+    text-transform:uppercase; letter-spacing:0.03em;
+    cursor:pointer; color:var(--ink); transition:all .2s ease;
+  }
+  .brew-tab.active{background:var(--ink); border-color:var(--ink); color:var(--kraft);}
+  .brew-tab:active{transform:scale(0.96);}
+  .brew-panels{margin-top:34px;}
+  .brew-panel{display:none;}
+  .brew-panel.active{display:grid; grid-template-columns:0.9fr 1.1fr; gap:44px; align-items:start;}
+  .brew-meta{
+    position:relative;
+    background:var(--roast-2); color:var(--kraft); border-radius:var(--radius-lg); padding:30px 28px;
+  }
+  .method-badge{
+    width:58px;height:58px;
+    clip-path:var(--clip-blob-56);
+    background:var(--kraft); color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:1.05rem;
+    transform:rotate(-6deg);
+    margin-bottom:16px;
+  }
+  .brew-meta .mono{color:#cbb99f; margin-bottom:8px;}
+  .brew-meta h3{font-size:1.5rem; margin-bottom:14px; text-transform:none;}
+  .brew-meta .meta-row{display:flex; justify-content:space-between; padding:10px 0; border-top:1px solid rgba(238,227,207,0.14); font-size:0.88rem;}
+  .brew-meta .meta-row:first-of-type{border-top:none;}
+  .steps{list-style:none; margin:0; padding:0; counter-reset:step;}
+  .steps li{
+    counter-increment:step; position:relative; padding:0 0 26px 46px; font-size:0.96rem; color:#3d2e24;
+    font-family:'Archivo',sans-serif;
+  }
+  .steps li:last-child{padding-bottom:0;}
+  .steps li::before{
+    content:counter(step);
+    position:absolute; left:0; top:-2px;
+    width:30px;height:30px;
+    clip-path:var(--clip-blob-44);
+    background:var(--kraft); border:2px solid var(--ink); color:var(--ink);
+    font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:0.82rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps li::after{
+    content:""; position:absolute; left:14px; top:28px; bottom:2px; width:0;
+    border-left:2px dotted rgba(23,20,15,0.22);
+  }
+  .steps li:last-child::after{display:none;}
 
-  .info-strip { background: var(--paper); padding: 4rem 1.5rem; }
-  .info-grid {
-    max-width: 1180px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  /* ---------- Visit ---------- */
+  .visit{
+    background:var(--roast-3); color:var(--kraft);
+    border-radius:var(--radius-lg); padding:56px; margin-top:56px;
+    display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;
+    position:relative; overflow:hidden;
   }
-  .info-card {
-    background: var(--white);
-    border-radius: 18px;
-    padding: 1.6rem 1.5rem;
-    box-shadow: 0 6px 24px rgba(10,15,14,0.06);
-    border: 1px solid rgba(10,15,14,0.05);
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+  .visit::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(60% 80% at 100% 0%, rgba(47,143,138,0.14), transparent 60%);
+    pointer-events:none;
   }
-  .info-card .icon {
-    width: 44px; height: 44px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: var(--turq);
-    display: flex; align-items: center; justify-content: center;
+  .visit h2{color:var(--kraft); font-size:2.1rem; text-transform:none;}
+  .visit .info-row{display:flex; gap:14px; margin-top:20px; align-items:flex-start;}
+  .visit .info-row .ico{
+    width:38px;height:38px;border-radius:10px; background:rgba(238,227,207,0.1);
+    display:flex;align-items:center;justify-content:center; flex-shrink:0; margin-top:2px;
   }
-  .info-card .icon svg { width: 24px; height: 24px; stroke: var(--ink); }
-  .info-card h3 { font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem; }
-  .info-card p { color: var(--muted); font-size: 0.92rem; }
-  .info-card .hours-row { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--muted); }
+  .visit .info-row b{display:block; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:1.05rem; margin-bottom:2px;}
+  .visit .info-row span{color:#c9b8a4; font-size:0.92rem;}
+  .visit-card{
+    position:relative;
+    background:rgba(238,227,207,0.06); border:1px solid rgba(238,227,207,0.16);
+    border-radius:var(--radius-lg); padding:30px;
+  }
+  .visit-card .open-stamp{
+    position:absolute; top:-16px; left:24px;
+    width:70px;height:70px;
+    clip-path:var(--clip-blob-56);
+    background:var(--teal); color:var(--ink);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:0.62rem; line-height:1.15;
+    text-transform:uppercase;
+    transform:rotate(8deg);
+    box-shadow:var(--shadow);
+  }
+  .visit-card .mono{color:#8a7562; margin-bottom:8px; margin-top:14px;}
+  .visit-card h3{color:var(--kraft); font-size:1.4rem; margin-bottom:16px; text-transform:none;}
+  .hours-row{display:flex; justify-content:space-between; padding:9px 0; border-top:1px solid rgba(238,227,207,0.12); font-size:0.9rem;}
+  .hours-row:first-of-type{border-top:none;}
+  .hours-row.closed{color:#8a7768;}
 
-  @media (max-width: 860px) { .info-grid { grid-template-columns: 1fr; } }
-
-  .about-wrap {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3.5rem;
-    align-items: center;
+  .visit-map{
+    grid-column:1 / -1;
+    margin-top:12px;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid rgba(238,227,207,0.18);
+    position:relative;
+    z-index:1;
+    filter:sepia(0.15) saturate(0.85);
   }
-  .about-copy p { color: var(--text); font-size: 1.02rem; margin-bottom: 1.1rem; }
-  .tank-frame {
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    background: linear-gradient(160deg, #6FE9DA, #0A0F0E);
-    box-shadow: 0 20px 50px rgba(10,15,14,0.25), inset 0 0 60px rgba(255,255,255,0.08);
-  }
-  #miniTankCanvas { width: 100%; height: 100%; }
-
-  @media (max-width: 860px) { .about-wrap { grid-template-columns: 1fr; } }
-
-  .products-section { background: var(--white); }
-  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-  .product-card {
-    background: var(--paper);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 1px solid rgba(10,15,14,0.06);
-  }
-  .product-card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(10,15,14,0.14); }
-  .product-media {
-    aspect-ratio: 5/4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(160deg, #6FE9DA, #0A0F0E);
-  }
-  .product-media svg { width: 62%; height: 62%; }
-  .product-media img { width: 100%; height: 100%; object-fit: cover; }
-  .product-body { padding: 1.3rem 1.4rem 1.5rem; }
-  .product-tag {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--turq-dark);
-    margin-bottom: 0.4rem;
-    display: block;
-  }
-  .product-body h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 0.35rem; }
-  .product-body p { font-size: 0.9rem; color: var(--muted); }
-
-  @media (max-width: 860px) { .product-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
-
-  .cta-band {
-    background: var(--ink);
-    color: var(--paper);
-    text-align: center;
-    padding: 4.5rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-band::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 20% 30%, rgba(20,184,166,0.22), transparent 45%),
-                radial-gradient(circle at 80% 70%, rgba(111,233,218,0.16), transparent 50%);
-  }
-  .cta-band-inner { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
-  .cta-band h2 { color: white; font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 0.9rem; }
-  .cta-band p { opacity: 0.85; margin-bottom: 2rem; }
-
-  footer { background: #05100F; color: rgba(231,244,242,0.75); padding: 3rem 1.5rem 2rem; }
-  .footer-inner {
-    max-width: 1180px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  .footer-brand {
-    font-family: 'Fraunces', serif;
-    color: var(--paper);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  .footer-col h4 {
-    color: var(--paper);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.8rem;
-  }
-  .footer-col a, .footer-col p { font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
-  .footer-col a:hover { color: var(--turq-light); }
-  .footer-bottom {
-    max-width: 1180px;
-    margin: 2.5rem auto 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(231,244,242,0.12);
-    font-size: 0.78rem;
-    text-align: center;
-    opacity: 0.6;
+  .visit-map iframe{display:block; width:100%; height:280px; border:0;}
+  @media (max-width:880px){
+    .visit-map iframe{height:220px;}
   }
 
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink); color:#a99a89; padding:52px 0 30px;}
+  footer .foot-top{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:36px; border-bottom:1px solid rgba(238,227,207,0.1);}
+  footer .brand .word{color:var(--kraft);}
+  footer .brand .mark{background:var(--kraft); color:var(--ink);}
+  footer .foot-links{display:flex; gap:50px; flex-wrap:wrap;}
+  footer .foot-col h4{font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.1em; color:#cbb99f; margin-bottom:14px;}
+  footer .foot-col a{display:block; text-decoration:none; color:#a99a89; font-size:0.92rem; margin-bottom:10px;}
+  footer .foot-col a:hover{color:var(--teal);}
+  footer .foot-bottom{padding-top:22px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:0.82rem;}
+  .concept-note{
+    margin-top:24px; padding:16px 20px; border:1px dashed rgba(238,227,207,0.22); border-radius:12px;
+    font-size:0.82rem; color:#8a7768; line-height:1.6;
+  }
+
+  @media (max-width: 880px){
+    nav.links, .nav .btn-ghost{display:none;}
+    .hamburger{display:block;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .route{grid-template-columns:repeat(2,1fr); row-gap:40px;}
+    .route::before{display:none;}
+    .menu-grid{grid-template-columns:repeat(2,1fr);}
+    .brew-panel.active{grid-template-columns:1fr;}
+    .visit{grid-template-columns:1fr; padding:34px;}
+    .foot-top{flex-direction:column;}
+  }
+  @media (max-width: 560px){
+    .menu-grid{grid-template-columns:1fr;}
+    .route{grid-template-columns:1fr;}
+    .hero{padding:66px 0 48px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
 </style>
 </head>
 <body>
+<a href="#top" class="skip-link">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
 
-<a href="#main" class="skip-link">Skip to content</a>
-
-<header class="site-header">
+<header class="nav">
   <div class="nav-inner">
-    <a href="#top" class="logo" aria-label="Planted Aquaria home">
-      <span>Planted Aquaria</span>
+    <a href="#top" class="brand">
+      <span class="mark">502</span>
+      <span class="word">Urban Coffee<small>Bronte Village</small></span>
     </a>
-    <nav class="links" id="navLinks">
-      <a href="#about">Our Shop</a>
-      <a href="#products">Featured</a>
+    <nav class="links">
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#brew">Brew Guides</a>
       <a href="#visit">Visit</a>
     </nav>
-    <a href="#visit" class="nav-cta">Get Directions</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <a href="#visit" class="btn btn-ghost" style="margin-right:10px;">Get Directions</a>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" style="display:none; flex-direction:column; padding:14px 28px 22px; gap:16px; border-top:1px solid var(--paper-line);">
+    <a href="#story">Our Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#brew">Brew Guides</a>
+    <a href="#visit">Visit</a>
   </div>
 </header>
 
-<main id="main">
-  <section class="hero" id="top" aria-label="Welcome to Planted Aquaria">
-    <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" poster="https://images.unsplash.com/photo-1520302519690-73024294f860?auto=format&fit=crop&w=1600&q=80">
-      <source src="https://cdn.pixabay.com/video/2022/03/15/110879-689510470_large.mp4" type="video/mp4">
-    </video>
-    <div class="hero-tint" aria-hidden="true"></div>
-    <div class="hero-rays" aria-hidden="true"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">2350 Lakeshore Road West · Oakville, Ontario</p>
-      <h1>Aquascaping, done <span>properly.</span></h1>
-      <p class="hero-sub">Premium live plants, healthy tropical fish, and the equipment to support them — curated by people who keep planted tanks themselves.</p>
-      <div class="hero-actions">
-        <a href="#products" class="btn-primary">See what's thriving</a>
-        <a href="#visit" class="btn-ghost">Shop hours &amp; location</a>
-      </div>
-    </div>
-    <div class="hero-waterline" aria-hidden="true"></div>
-  </section>
-
-  <section class="badge-strip" aria-label="Why shop with us">
-    <div class="badge-grid">
-      <div class="badge-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <div>
-          <h3>DOA Guaranteed</h3>
-          <p>Livestock &amp; plant protection</p>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
-        <div>
-          <h3>Speedy Shipping</h3>
-          <p>Express &amp; overnight delivery</p>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></div>
-        <div>
-          <h3>Trusted Expertise</h3>
-          <p>Real advice, seven days a week</p>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 1 0 5H7"/></svg></div>
-        <div>
-          <h3>Competitive Pricing</h3>
-          <p>Top value, honest cost</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="info-strip" id="visit" aria-label="Visit information">
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div>
-          <h3>Find us</h3>
-          <p>2350 Lakeshore Road West<br>Oakville, ON L6L 1H5</p>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div>
-          <h3>Shop hours</h3>
-          <div class="hours-row"><span>Monday</span><span>11am – 3pm</span></div>
-          <div class="hours-row"><span>Tue – Sun</span><span>11am – 8pm</span></div>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5Z"/></svg>
-        </div>
-        <div>
-          <h3>Get in touch</h3>
-          <p>Questions about plants, livestock, or your setup — call, email, or drop by.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" aria-label="About Planted Aquaria">
-    <div class="section-inner about-wrap">
-      <div class="about-copy">
-        <span class="eyebrow">Our Shop</span>
-        <h2>Oakville's aquarium &amp; aquascaping specialists since 2019</h2>
-        <p>Planted Aquaria was built to bring real aquascaping expertise to Oakville — no big-box guesswork. Every tank in the shop is planted, stocked, and watched by people who keep aquariums themselves.</p>
-        <p>We carry premium live aquatic plants, healthy tropical fish, and the hardscape, lighting, and CO2 equipment to support a proper planted setup, held to the same standard we'd want for our own tanks at home.</p>
-        <p>Come in, tell us what you're building, and we'll help you find the right plants, livestock, and gear for it.</p>
-      </div>
-      <div class="tank-frame">
-        <canvas id="miniTankCanvas" aria-label="Animated illustration of a planted aquarium tank"></canvas>
-      </div>
-    </div>
-  </section>
-
-  <section class="products-section" id="products" aria-label="Featured products">
-    <div class="section-inner">
-      <div class="section-head">
-        <span class="eyebrow">Featured</span>
-        <h2>What's thriving this week</h2>
-        <p>A rotating pick of what's looking best in the shop right now. Stock changes often — call ahead if you're chasing something specific.</p>
-      </div>
-      <div class="product-grid">
-
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://images.unsplash.com/photo-1643563459751-3f3584476de9?auto=format&fit=crop&w=800&q=80" alt="A school of neon tetra swimming in an aquarium">
-          </div>
-          <div class="product-body">
-            <span class="product-tag">Live Fish</span>
-            <h3>Neon Tetra (school of 6)</h3>
-            <p>Peaceful, hardy, and endlessly bright — a great anchor school for a planted community tank.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://images.unsplash.com/photo-1566128920247-b155c2e07f7d?auto=format&fit=crop&w=800&q=80" alt="A silver angelfish in an aquarium">
-          </div>
-          <div class="product-body">
-            <span class="product-tag">Live Fish</span>
-            <h3>Silver Angelfish</h3>
-            <p>Graceful centerpiece fish for taller tanks. Calm temperament, striking in a planted setup.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://images.unsplash.com/photo-1579967327980-2a4117da0e4a?auto=format&fit=crop&w=800&q=80" alt="A potted green Amazon Sword plant in a fish tank">
-          </div>
-          <div class="product-body">
-            <span class="product-tag">Live Plants</span>
-            <h3>Amazon Sword (potted)</h3>
-            <p>Easy-care background plant that gives fry and shy fish plenty of cover.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://images.unsplash.com/photo-1643563458878-2281f9287ae3?auto=format&fit=crop&w=800&q=80" alt="A golden yellow gourami swimming in an aquarium">
-          </div>
-          <div class="product-body">
-            <span class="product-tag">Live Fish</span>
-            <h3>Honey Gourami</h3>
-            <p>A calm, colourful mid-water fish that gets along well in most community setups.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://images.unsplash.com/photo-1711539137981-ddf32f60c77b?auto=format&fit=crop&w=800&q=80" alt="A set-up aquarium tank with plants and rocks">
-          </div>
-          <div class="product-body">
-            <span class="product-tag">Hardware</span>
-            <h3>20-Gallon Starter Tank Kit</h3>
-            <p>Tank, filter, and lighting bundled for a first planted community setup.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://images.unsplash.com/photo-1553986187-9cb16fa33483?auto=format&fit=crop&w=800&q=80" alt="A male veiltail betta fish">
-          </div>
-          <div class="product-body">
-            <span class="product-tag">Live Fish</span>
-            <h3>Betta (male, veiltail)</h3>
-            <p>Solo showpiece fish — keep alone or with calm, non-nippy tankmates.</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-band" aria-label="Visit the shop">
-    <div class="cta-band-inner">
-      <h2>See the aquascapes in person</h2>
-      <p>Photos only tell you so much. Stop by 2350 Lakeshore Road West and see what's actually thriving today.</p>
-      <a href="#visit" class="btn-primary">Plan your visit</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-inner">
+<div id="top"></div>
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="marquee-row left"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"></div>
+    <div class="marquee-row right"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"></div>
+    <div class="marquee-row left-slow"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=60" alt="" loading="lazy"></div>
+  </div>
+  <div class="wrap">
     <div>
-      <span class="footer-brand">Planted Aquaria</span>
-      <p style="max-width:28ch; opacity:0.8;">Oakville's aquarium &amp; aquascaping specialists — live plants, healthy fish, and considered equipment since 2019.</p>
+      <div class="eyebrow mono"><span class="dot"></span> Bronte Village, Oakville</div>
+      <h1>Small-batch coffee, <em>carried</em> from the Guatemalan highlands.</h1>
+      <p class="lead">Roasted in small batches, poured fresh in the heart of Bronte.</p>
+      <div class="cta-row">
+        <a href="#menu" class="btn btn-solid">See the Menu</a>
+        <a href="#visit" class="btn btn-ghost">Tue–Sat, 9–4 · Visit Us</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Visit</h4>
-      <p>2350 Lakeshore Road West</p>
-      <p>Oakville, ON L6L 1H5</p>
-    </div>
-    <div class="footer-col">
-      <h4>Hours</h4>
-      <p>Monday: 11am–3pm</p>
-      <p>Tue – Sun: 11am–8pm</p>
-    </div>
-    <div class="footer-col">
-      <h4>Explore</h4>
-      <a href="#about">Our Shop</a>
-      <a href="#products">Featured</a>
-      <a href="#visit">Visit Us</a>
+    <div class="photo-stack reveal">
+      <div class="photo-card card-a"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="Pour-over coffee brewing behind the counter"></div>
+      <div class="photo-card card-b"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=500&q=80" alt="Freshly roasted coffee beans"></div>
+      <div class="stamp-mini" aria-hidden="true">Small<br>Batch</div>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Planted Aquaria. Concept redesign by STOHRX — not an official Planted Aquaria site.</div>
+</section>
+<div class="seam" aria-hidden="true"><svg viewBox="0 0 1200 22" preserveAspectRatio="none"><path d="M0,10 L60,3 L120,15 L180,4 L240,13 L300,6 L360,16 L420,4 L480,12 L540,3 L600,15 L660,5 L720,13 L780,4 L840,16 L900,3 L960,12 L1020,5 L1080,15 L1140,4 L1200,11 L1200,22 L0,22 Z" style="fill:var(--kraft-2)"/></svg></div>
+
+<section class="section alt" id="story">
+  <div class="wrap">
+    <div class="kicker"><span class="rule"></span><span class="mono">Our Story</span></div>
+    <h2 class="reveal">From a farmer's market table to a storefront on Lakeshore.</h2>
+    <p class="intro reveal">502 Urban Coffee began with a table at the Bronte Farmer's Market and coffee sourced directly from small growers back home in Guatemala. That same route — highland farm to small-batch roast to a warm cup in Bronte Village — still shapes everything we pour today.</p>
+
+    <div class="route">
+      <div class="stop reveal">
+        <div class="stop-badge" aria-hidden="true">01</div>
+        <div class="mono">Origin</div>
+        <h3>Guatemalan Highlands</h3>
+        <p>Beans hand-selected from small artisanal growers.</p>
+      </div>
+      <div class="stop reveal">
+        <div class="stop-badge" aria-hidden="true">02</div>
+        <div class="mono">Craft</div>
+        <h3>Small-Batch Roast</h3>
+        <p>Roasted in small batches to protect aroma and flavor.</p>
+      </div>
+      <div class="stop reveal">
+        <div class="stop-badge" aria-hidden="true">03</div>
+        <div class="mono">Beginning</div>
+        <h3>Bronte Farmer's Market</h3>
+        <p>Where the first cups were poured and the first regulars found us.</p>
+      </div>
+      <div class="stop reveal">
+        <div class="stop-badge" aria-hidden="true">04</div>
+        <div class="mono">Today</div>
+        <h3>Bronte Village Storefront</h3>
+        <p>A cozy spot to sit, sip, and take beans home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"><svg viewBox="0 0 1200 22" preserveAspectRatio="none"><path d="M0,10 L60,3 L120,15 L180,4 L240,13 L300,6 L360,16 L420,4 L480,12 L540,3 L600,15 L660,5 L720,13 L780,4 L840,16 L900,3 L960,12 L1020,5 L1080,15 L1140,4 L1200,11 L1200,22 L0,22 Z" style="fill:var(--kraft)"/></svg></div>
+
+<section class="section" id="menu">
+  <div class="wrap">
+    <div class="kicker"><span class="rule"></span><span class="mono">Menu</span></div>
+    <h2 class="reveal">Espresso, brewed with Guatemalan chocolate warmth.</h2>
+    <p class="intro reveal">A short menu, done properly — plus fresh local baked goods and beans to take home.</p>
+
+    <div class="menu-grid">
+      <div class="drink-card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=800&q=80" alt="Cappuccino with latte art" loading="lazy"></div>
+        <div class="card-body">
+        <div class="monogram">C</div>
+        <h3>Cappuccino</h3>
+        <p>Rich espresso and steamed milk, finished with a light layer of foam. Creamy and mild.</p>
+        <div class="tag-ticket mono">Hot &amp; Iced</div>
+        </div>
+      </div>
+      <div class="drink-card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1646388022965-2bfa12635f01?auto=format&fit=crop&w=800&q=80" alt="Mocha topped with whipped cream" loading="lazy"></div>
+        <div class="card-body">
+        <div class="monogram">M</div>
+        <h3>Mocha</h3>
+        <p>Espresso blended with artisan Guatemalan chocolate and steamed milk — deep and smooth.</p>
+        <div class="tag-ticket mono">Hot &amp; Iced</div>
+        </div>
+      </div>
+      <div class="drink-card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Americano black coffee" loading="lazy"></div>
+        <div class="card-body">
+        <div class="monogram">A</div>
+        <h3>Americano</h3>
+        <p>Espresso and hot water, highlighting the coffee's natural notes for a clean finish.</p>
+        <div class="tag-ticket mono">Hot &amp; Iced</div>
+        </div>
+      </div>
+      <div class="drink-card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?auto=format&fit=crop&w=800&q=80" alt="Cafe latte" loading="lazy"></div>
+        <div class="card-body">
+        <div class="monogram">L</div>
+        <h3>Latte</h3>
+        <p>A smooth, comforting balance of espresso and steamed milk, mild in flavor.</p>
+        <div class="tag-ticket mono">Hot &amp; Iced</div>
+        </div>
+      </div>
+      <div class="drink-card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=800&q=80" alt="Fresh croissants and baked goods" loading="lazy"></div>
+        <div class="card-body">
+        <div class="monogram">P</div>
+        <h3>Fresh Pastries</h3>
+        <p>Baked locally and delivered fresh — the daily partner to your cup.</p>
+        <div class="tag-ticket mono">Daily selection</div>
+        </div>
+      </div>
+      <div class="drink-card reveal">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?auto=format&fit=crop&w=800&q=80" alt="Sack of roasted coffee beans" loading="lazy"></div>
+        <div class="card-body">
+        <div class="monogram">B</div>
+        <h3>Beans To Go</h3>
+        <p>Take our small-batch Guatemalan beans home. Free local shipping over $60.</p>
+        <div class="tag-ticket mono">By the bag</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"><svg viewBox="0 0 1200 22" preserveAspectRatio="none"><path d="M0,10 L60,3 L120,15 L180,4 L240,13 L300,6 L360,16 L420,4 L480,12 L540,3 L600,15 L660,5 L720,13 L780,4 L840,16 L900,3 L960,12 L1020,5 L1080,15 L1140,4 L1200,11 L1200,22 L0,22 Z" style="fill:var(--kraft-2)"/></svg></div>
+
+<section class="section alt" id="brew">
+  <div class="wrap">
+    <div class="kicker"><span class="rule"></span><span class="mono">Brew Guides</span></div>
+    <h2 class="reveal">However you make it at home, make it right.</h2>
+    <p class="intro reveal">Three ways to brew our beans, straight from our own counter.</p>
+
+    <div class="brew-tabs">
+      <button class="brew-tab active" data-tab="press">French Press</button>
+      <button class="brew-tab" data-tab="chemex">Chemex</button>
+      <button class="brew-tab" data-tab="moka">Moka Pot</button>
+    </div>
+
+    <div class="brew-panels">
+      <div class="brew-panel active" id="press">
+        <div class="brew-meta">
+          <div class="method-badge" aria-hidden="true">01</div>
+          <div class="mono">Method</div>
+          <h3>French Press</h3>
+          <div class="meta-row"><span>Grind</span><span>Coarse</span></div>
+          <div class="meta-row"><span>Ratio</span><span>1:15</span></div>
+          <div class="meta-row"><span>Time</span><span>4 minutes</span></div>
+        </div>
+        <ol class="steps">
+          <li>Add coarsely ground coffee to the empty press.</li>
+          <li>Pour hot water (just off the boil) evenly over the grounds.</li>
+          <li>Stir gently once, then set the lid on top without pressing.</li>
+          <li>Steep for 4 minutes.</li>
+          <li>Press the plunger down slowly and pour immediately.</li>
+        </ol>
+      </div>
+      <div class="brew-panel" id="chemex">
+        <div class="brew-meta">
+          <div class="method-badge" aria-hidden="true">02</div>
+          <div class="mono">Method</div>
+          <h3>Chemex</h3>
+          <div class="meta-row"><span>Grind</span><span>Medium-coarse</span></div>
+          <div class="meta-row"><span>Ratio</span><span>1:16</span></div>
+          <div class="meta-row"><span>Time</span><span>~4.5 minutes</span></div>
+        </div>
+        <ol class="steps">
+          <li>Fold the filter and rinse it with hot water; discard the rinse.</li>
+          <li>Add the ground coffee and level the bed.</li>
+          <li>Bloom with a small pour, let it sit for 30 seconds.</li>
+          <li>Pour in slow, steady circles until you reach your target weight.</li>
+          <li>Let it fully drain, then remove the filter and serve.</li>
+        </ol>
+      </div>
+      <div class="brew-panel" id="moka">
+        <div class="brew-meta">
+          <div class="method-badge" aria-hidden="true">03</div>
+          <div class="mono">Method</div>
+          <h3>Moka Pot</h3>
+          <div class="meta-row"><span>Grind</span><span>Fine</span></div>
+          <div class="meta-row"><span>Ratio</span><span>Fill basket</span></div>
+          <div class="meta-row"><span>Time</span><span>4–5 minutes</span></div>
+        </div>
+        <ol class="steps">
+          <li>Fill the bottom chamber with hot water up to the valve.</li>
+          <li>Fill the funnel basket with fine coffee, level (don't tamp).</li>
+          <li>Assemble and set on medium heat with the lid open.</li>
+          <li>Listen for the gurgle — that's your cue it's nearly done.</li>
+          <li>Remove from heat as soon as the flow turns pale and hissy.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"><svg viewBox="0 0 1200 22" preserveAspectRatio="none"><path d="M0,10 L60,3 L120,15 L180,4 L240,13 L300,6 L360,16 L420,4 L480,12 L540,3 L600,15 L660,5 L720,13 L780,4 L840,16 L900,3 L960,12 L1020,5 L1080,15 L1140,4 L1200,11 L1200,22 L0,22 Z" style="fill:var(--kraft)"/></svg></div>
+
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="visit">
+      <div>
+        <div class="mono" style="color:var(--teal); margin-bottom:14px;">Visit Us</div>
+        <h2>Cozy seats, a warm cup, and a good reason to slow down.</h2>
+        <div class="info-row">
+          <div class="ico">📍</div>
+          <div><b>2362 Lakeshore Road West</b><span>Bronte Village, Oakville, ON L6L 1H5</span></div>
+        </div>
+        <div class="info-row">
+          <div class="ico">☕</div>
+          <div><b>Dine-in, pickup &amp; delivery</b><span>Fresh pastries daily, beans available to take home</span></div>
+        </div>
+        <div class="info-row">
+          <div class="ico">✉️</div>
+          <div><b>@502urbancoffee</b><span>Follow along for daily brews and market news</span></div>
+        </div>
+        <div class="cta-row" style="margin-top:28px;">
+          <a href="https://www.google.com/maps/search/?api=1&query=2362+Lakeshore+Road+West+Oakville+ON" target="_blank" rel="noopener" class="btn btn-solid">Get Directions</a>
+        </div>
+      </div>
+      <div class="visit-card">
+        <div class="open-stamp" aria-hidden="true">Open<br>Tue–Sat</div>
+        <div class="mono">Hours</div>
+        <h3>Open Tuesday–Saturday</h3>
+        <div class="hours-row"><span>Tuesday</span><span>9:00 – 4:00</span></div>
+        <div class="hours-row"><span>Wednesday</span><span>9:00 – 4:00</span></div>
+        <div class="hours-row"><span>Thursday</span><span>9:00 – 4:00</span></div>
+        <div class="hours-row"><span>Friday</span><span>9:00 – 4:00</span></div>
+        <div class="hours-row"><span>Saturday</span><span>9:00 – 4:00</span></div>
+        <div class="hours-row closed"><span>Sun – Mon</span><span>Closed</span></div>
+      </div>
+      <div class="visit-map">
+        <iframe
+          src="https://www.google.com/maps?q=2362+Lakeshore+Road+West,+Oakville,+ON+L6L+1H5&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="502 Urban Coffee location map">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="seam" aria-hidden="true"><svg viewBox="0 0 1200 22" preserveAspectRatio="none"><path d="M0,10 L60,3 L120,15 L180,4 L240,13 L300,6 L360,16 L420,4 L480,12 L540,3 L600,15 L660,5 L720,13 L780,4 L840,16 L900,3 L960,12 L1020,5 L1080,15 L1140,4 L1200,11 L1200,22 L0,22 Z" style="fill:var(--ink)"/></svg></div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#top" class="brand">
+          <span class="mark">502</span>
+          <span class="word">Urban Coffee</span>
+        </a>
+        <p style="max-width:32ch; margin-top:16px; font-size:0.92rem;">Guatemalan specialty coffee, roasted small-batch and served with local baked goods in the heart of Bronte.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <a href="#story">Our Story</a>
+          <a href="#menu">Menu</a>
+          <a href="#brew">Brew Guides</a>
+        </div>
+        <div class="foot-col">
+          <h4>Visit</h4>
+          <a href="#visit">2362 Lakeshore Rd W</a>
+          <a href="#visit">Tue–Sat, 9–4</a>
+        </div>
+        <div class="foot-col">
+          <h4>Connect</h4>
+          <a href="https://instagram.com/502urbancoffee" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/502urbancoffee" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 502 Urban Coffee, Bronte Village.</span>
+      <span>Design concept by STOHRX</span>
+    </div>
+    <div class="concept-note">
+      This is a redesign concept prepared by STOHRX and is not the current live website. Shown to illustrate a proposed look, structure, and tone for 502 Urban Coffee — happy to adjust colors, copy, or sections to match your vision.
+    </div>
+  </div>
 </footer>
 
 <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  menuToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', isOpen);
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Brew tabs
+  document.querySelectorAll('.brew-tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      document.querySelectorAll('.brew-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.brew-panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
   });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', false);
-  }));
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Active nav link on scroll
+  const navIo = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const link = document.querySelector('nav.links a[href="#'+entry.target.id+'"]');
+      if(link) link.classList.toggle('active', entry.isIntersecting);
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('section[id]').forEach(s=>navIo.observe(s));
 
-  (function () {
-    const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo && prefersReducedMotion) {
-      heroVideo.removeAttribute('autoplay');
-      heroVideo.pause();
-    }
-  })();
-
-  (function () {
-    const canvas = document.getElementById('miniTankCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let W, H, DPR;
-
-    function resize() {
-      DPR = Math.min(window.devicePixelRatio || 1, 2);
-      W = canvas.clientWidth;
-      H = canvas.clientHeight;
-      canvas.width = W * DPR;
-      canvas.height = H * DPR;
-      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    }
-    const ro = new ResizeObserver(resize);
-    ro.observe(canvas);
-    resize();
-
-    const palette = [
-      { body: '#1FD9C4', fin: '#0C8A7D' },
-      { body: '#05100F', fin: '#0A2B28' },
-      { body: '#FFFFFF', fin: '#BFEDE7' },
-    ];
-
-    function drawFishShape(ctx, len, bodyColor, finColor, tailPhase) {
-      const wag = Math.sin(tailPhase) * 0.35;
-      ctx.save();
-      ctx.beginPath();
-      ctx.moveTo(-len * 0.5, 0);
-      ctx.quadraticCurveTo(-len * 0.75, -len * 0.28 * (1 + wag), -len * 1.05, 0);
-      ctx.quadraticCurveTo(-len * 0.75, len * 0.28 * (1 - wag), -len * 0.5, 0);
-      ctx.fillStyle = finColor;
-      ctx.fill();
-      ctx.beginPath();
-      ctx.ellipse(0, 0, len * 0.5, len * 0.28, 0, 0, Math.PI * 2);
-      ctx.fillStyle = bodyColor;
-      ctx.fill();
-      ctx.beginPath();
-      ctx.arc(len * 0.32, -len * 0.04, len * 0.055, 0, Math.PI * 2);
-      ctx.fillStyle = '#05100F';
-      ctx.fill();
-      ctx.restore();
-    }
-
-    const fishes = Array.from({ length: 4 }, (_, i) => ({
-      x: Math.random(),
-      y: 0.2 + Math.random() * 0.55,
-      len: 16 + Math.random() * 10,
-      speed: 0.0003 + Math.random() * 0.0003,
-      dir: Math.random() > 0.5 ? 1 : -1,
-      bob: Math.random() * Math.PI * 2,
-      tailPhase: Math.random() * Math.PI * 2,
-      color: palette[i % palette.length],
-    }));
-
-    function drawPlants() {
-      ctx.save();
-      ctx.strokeStyle = 'rgba(63,220,151,0.55)';
-      ctx.lineWidth = 4;
-      ctx.lineCap = 'round';
-      for (let i = 0; i < 6; i++) {
-        const bx = (i / 5) * W;
-        ctx.beginPath();
-        ctx.moveTo(bx, H);
-        ctx.quadraticCurveTo(bx + Math.sin(Date.now() * 0.0006 + i) * 10, H - H * 0.35, bx + Math.sin(Date.now() * 0.0004 + i) * 6, H - H * 0.55);
-        ctx.stroke();
-      }
-      ctx.restore();
-    }
-
-    let t = 0;
-    function frame() {
-      t += 1;
-      ctx.clearRect(0, 0, W, H);
-      drawPlants();
-      fishes.forEach(f => {
-        f.x += f.speed * f.dir * (prefersReducedMotion ? 0 : 1);
-        if (f.x > 1.15) f.x = -0.15;
-        if (f.x < -0.15) f.x = 1.15;
-        f.tailPhase += 0.1;
-        const bobY = Math.sin(t * 0.02 + f.bob) * 6;
-        const px = f.x * W;
-        const py = f.y * H + bobY;
-        ctx.save();
-        ctx.translate(px, py);
-        ctx.scale(f.dir === 1 ? 1 : -1, 1);
-        drawFishShape(ctx, f.len, f.color.body, f.color.fin, f.tailPhase);
-        ctx.restore();
-      });
-      if (!prefersReducedMotion) requestAnimationFrame(frame);
-    }
-    frame();
-  })();
+  // Mobile menu
+  const mobileMenu = document.querySelector('.mobile-menu');
+  document.querySelectorAll('.mobile-menu a').forEach(a=>{
+    a.addEventListener('click', ()=> mobileMenu.style.display='none');
+  });
+  const hamburger = document.querySelector('.hamburger');
+  const toggleMobile = ()=>{
+    mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+  };
+  hamburger.removeAttribute('onclick');
+  hamburger.addEventListener('click', toggleMobile);
 </script>
 
 </body>
