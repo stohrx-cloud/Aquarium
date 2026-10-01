@@ -1,0 +1,1273 @@
+<title>Taste of Colombia</title>
+<meta name="description" content="A little Colombian café, gift shop and dance room on Bronte Road in Oakville. Fair-trade coffee by day, salsa by night. Since 2012.">
+<link rel="icon" href="images/logo-badge.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat:wght@500;700&family=Albert+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --ink:#2B1B17;
+  --ink-2:#6A554A;
+  --paper:#FFFBF4;
+  --paper-2:#F4EADB;
+  --plate:#FFFDF8;
+  --kraft:#E3C79B;
+  --wall:#DCE5D3;
+  --wood:#8A5A3B;
+  --leaf:#2E6B45;
+  --cobalt:#1F4FB4;
+  --red:#E2333F;
+  --chalk:#21302A;
+  --chalk-ink:#F2EEE3;
+  --night:#24102D;
+  --night-2:#371846;
+  --night-3:#4A2159;
+  --rumba:#FF4D6D;
+  --gold:#FFC23D;
+  --line:rgba(43,27,23,.13);
+  --display:'Caprasimo', 'Cooper Black', Georgia, serif;
+  --hand:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+  --body:'Albert Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --g:clamp(16px, 4vw, 40px);
+  --max:1200px;
+  --ceramic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='44' viewBox='0 0 96 44'%3E%3Cg transform='translate(24 22)'%3E%3Cg fill='%231F4FB4'%3E%3Cellipse rx='4.2' ry='7.5' cy='-7.5'/%3E%3Cellipse rx='4.2' ry='7.5' cy='-7.5' transform='rotate(72)'/%3E%3Cellipse rx='4.2' ry='7.5' cy='-7.5' transform='rotate(144)'/%3E%3Cellipse rx='4.2' ry='7.5' cy='-7.5' transform='rotate(216)'/%3E%3Cellipse rx='4.2' ry='7.5' cy='-7.5' transform='rotate(288)'/%3E%3C/g%3E%3Ccircle r='3.8' fill='%23FFC23D'/%3E%3Ccircle r='1.5' fill='%23E2333F'/%3E%3C/g%3E%3Cg transform='translate(60 22)'%3E%3Cpath d='M-11 6 C-4 -8 6 -8 11 -2 C4 2 -4 6 -11 6Z' fill='%232E6B45'/%3E%3C/g%3E%3Ccircle cx='80' cy='12' r='2.6' fill='%23E2333F'/%3E%3Ccircle cx='87' cy='23' r='2' fill='%231F4FB4'/%3E%3Ccircle cx='79' cy='33' r='2.6' fill='%23E2333F'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--body);overflow-x:hidden}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:400;line-height:1.03;text-wrap:balance}
+p{margin:0}
+button,select,input,textarea{font-family:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--g)}
+.hand{font-family:var(--hand);font-weight:700}
+.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Buttons: chunky stickers ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:800 1rem/1 var(--body);padding:1em 1.4em;border-radius:999px;border:0;text-decoration:none;cursor:pointer;background:var(--ink);color:#fff;box-shadow:0 4px 0 #000;transition:transform .12s ease, box-shadow .12s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 #000}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #000}
+.btn.rumba{background:var(--rumba);box-shadow:0 4px 0 #B32443}
+.btn.rumba:hover{box-shadow:0 6px 0 #B32443}
+.btn.gold{background:var(--gold);color:var(--ink);box-shadow:0 4px 0 #B9860E}
+.btn.gold:hover{box-shadow:0 6px 0 #B9860E}
+.btn.cobalt{background:var(--cobalt);box-shadow:0 4px 0 #12306E}
+.btn.cobalt:hover{box-shadow:0 6px 0 #12306E}
+.btn.plain{background:#fff;color:var(--ink);box-shadow:0 0 0 2px var(--ink), 0 4px 0 2px var(--ink)}
+.btn.plain:hover{box-shadow:0 0 0 2px var(--ink), 0 6px 0 2px var(--ink)}
+.btn.sm{font-size:.9rem;padding:.75em 1.05em}
+.btn[disabled]{background:#CFC4B8;color:#6E6156;box-shadow:none;cursor:not-allowed;transform:none}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.link{font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+@media (max-width:480px){.btn{white-space:normal;text-align:center}}
+
+/* ---------- Header (the awning) ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:var(--ink);color:var(--paper)}
+.top::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px;background:radial-gradient(circle at 10px 0, var(--ink) 9.5px, transparent 10px) 0 0/20px 10px repeat-x;pointer-events:none}
+.bar{display:flex;align-items:center;gap:14px;min-height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;flex:none}
+.brand img{width:46px;height:46px;object-fit:contain;background:#fff;border-radius:50%;padding:3px}
+.brand .n{font-family:var(--display);font-size:1.2rem;line-height:1;display:block}
+.brand .s{font-family:var(--hand);font-weight:700;color:var(--gold);font-size:1.08rem;line-height:1;display:block;margin-top:2px}
+.nav{display:flex;gap:2px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav a{display:block;padding:.5em .8em;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;color:#F1E6D8;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.1)}
+.nav a[aria-current="page"]{background:var(--paper);color:var(--ink)}
+.nav a.shop-link{color:var(--gold)}
+.nav a.shop-link[aria-current="page"]{background:var(--gold);color:var(--ink)}
+.pill{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;font-weight:700;padding:.45em .8em;border-radius:999px;background:rgba(255,255,255,.1);white-space:nowrap}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:#aaa;flex:none}
+.pill.open .dot{background:#3DDC84;box-shadow:0 0 0 3px rgba(61,220,132,.25)}
+.pill.closed .dot{background:var(--rumba)}
+.cart-btn{position:relative;display:inline-flex;align-items:center;gap:.45em;background:var(--gold);color:var(--ink);border:0;border-radius:999px;padding:.6em 1em;font:800 .95rem var(--body);cursor:pointer;flex:none}
+.cart-btn svg{width:20px;height:20px}
+.cart-btn .badge{min-width:22px;height:22px;border-radius:999px;background:var(--ink);color:#fff;font-size:.78rem;display:inline-grid;place-items:center;padding:0 6px}
+.cart-btn.bump{animation:bump .4s ease}
+@keyframes bump{40%{transform:scale(1.15)}}
+.burger{display:none;background:transparent;color:var(--paper);border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:.5em .9em;font:700 .95rem var(--body);cursor:pointer;flex:none}
+@media (max-width:1120px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink);padding:16px var(--g) 22px;gap:4px;margin:0}
+  .nav.show{display:flex}
+  .nav a{font-size:1.2rem;padding:.7em .8em;border-radius:12px}
+  .burger{display:inline-block}
+  .bar .pill{margin-left:auto}
+}
+@media (max-width:700px){.bar .cart-btn{display:none}}
+@media (max-width:620px){.pill .long{display:none}.brand .s{display:none}.brand .n{font-size:.98rem}.brand img{width:40px;height:40px}}
+@media (max-width:480px){.bar .pill{display:none}.bar .burger{margin-left:auto}}
+
+/* ---------- Ceramic strip ---------- */
+.ceramic{height:56px;background:var(--ceramic) center/96px 44px repeat-x, var(--plate);border-block:3px solid var(--cobalt);box-shadow:inset 0 5px 0 var(--plate), inset 0 7px 0 var(--cobalt), inset 0 -5px 0 var(--plate), inset 0 -7px 0 var(--cobalt)}
+
+/* ---------- Hero ---------- */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(34px,5vw,64px) 18px}
+.kicker{font-family:var(--hand);font-weight:700;font-size:1.5rem;color:var(--leaf);line-height:1}
+.hero h1{font-family:var(--display);font-size:clamp(2.2rem,5vw,4.6rem);letter-spacing:-.01em;margin-top:10px}
+.swoosh{position:relative;color:var(--rumba);white-space:nowrap}
+.swoosh svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.34em;overflow:visible}
+.hero .lede{font-size:clamp(1.05rem,1.5vw,1.2rem);max-width:40ch;margin-top:22px;color:#4A3A33}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;align-items:center}
+.collage{position:relative;width:100%;max-width:540px;aspect-ratio:1/1.02;justify-self:end}
+.arch{position:absolute;left:12%;top:5%;width:56%;height:84%;border-radius:999px 999px 22px 22px;overflow:hidden;border:7px solid #fff;box-shadow:0 22px 40px rgba(43,27,23,.22);z-index:2;background:var(--paper-2)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.collage .vinyl-wrap{position:absolute;right:0;top:15%;width:50%;z-index:1}
+.collage .pol{position:absolute;left:0;bottom:1%;width:37%;z-index:3}
+.collage .pol img{height:auto;aspect-ratio:1}
+.collage .ptag{position:absolute;top:auto;right:5%;bottom:6%;z-index:4;font-size:1.6rem}
+.collage .ptag small{display:block;font-family:var(--body);font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.note{position:absolute;font-family:var(--hand);font-weight:700;font-size:1.35rem;line-height:1.02;z-index:5;color:var(--ink)}
+.note svg{display:block;width:60px;height:44px;margin-top:2px}
+.note.n1{left:-1%;top:0}
+.note.n2{right:0;top:0;text-align:right}
+.note.n2 svg{margin-left:auto}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.collage{justify-self:center;max-width:440px}}
+@media (max-width:560px){.note{display:none}.collage .ptag{font-size:1.3rem}}
+
+/* Vinyl record */
+.vinyl-wrap{position:relative;aspect-ratio:1;border-radius:50%;box-shadow:0 18px 34px rgba(0,0,0,.32)}
+.vinyl{position:absolute;inset:0;border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%, #17121A 0 1.4px, #2A2230 1.4px 2.8px);animation:spin 10s linear infinite}
+.vinyl .lbl{position:absolute;inset:30%;border-radius:50%;background:var(--rumba);color:#fff;display:grid;align-content:center;justify-items:center;text-align:center;gap:22%;box-shadow:inset 0 0 0 4px rgba(0,0,0,.12)}
+.vinyl .lbl b{font-family:var(--display);font-weight:400;font-size:clamp(.72rem,1.5vw,1.05rem);line-height:1}
+.vinyl .lbl i{font-family:var(--hand);font-style:normal;font-weight:700;font-size:clamp(.8rem,1.5vw,1.1rem);line-height:1;color:var(--gold)}
+.vinyl .lbl::after{content:"";position:absolute;left:50%;top:50%;width:9%;height:9%;transform:translate(-50%,-50%);border-radius:50%;background:#120D14}
+.vinyl-wrap::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:conic-gradient(from 20deg, transparent 0 8%, rgba(255,255,255,.14) 12%, transparent 18% 50%, rgba(255,255,255,.1) 58%, transparent 66%)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Today ticket */
+.ticket{--n:12px;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:stretch;background:var(--gold);border-radius:12px;margin-top:18px;
+  -webkit-mask:radial-gradient(circle var(--n) at 0 50%, #0000 98%, #000) 0 0/51% 100% no-repeat, radial-gradient(circle var(--n) at 100% 50%, #0000 98%, #000) 100% 0/51% 100% no-repeat;
+          mask:radial-gradient(circle var(--n) at 0 50%, #0000 98%, #000) 0 0/51% 100% no-repeat, radial-gradient(circle var(--n) at 100% 50%, #0000 98%, #000) 100% 0/51% 100% no-repeat}
+.stub{padding:14px 20px 14px 26px;border-right:2px dashed rgba(43,27,23,.45);display:grid;align-content:center}
+.stub .hand{font-size:1.9rem;line-height:.9}
+.stub small{font-weight:800;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+.tbody{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:12px 26px 12px 18px}
+.tchip{display:inline-flex;align-items:center;gap:.4em;background:var(--plate);border-radius:999px;padding:.42em .85em;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.tchip.ev{background:var(--night);color:#fff}
+.tchip.ev b{color:var(--gold)}
+.tbody .link{margin-left:auto;white-space:nowrap}
+@media (max-width:560px){.ticket{grid-template-columns:1fr}.stub{border-right:0;border-bottom:2px dashed rgba(43,27,23,.45);padding:12px 22px;display:flex;gap:10px;align-items:baseline}.tbody{padding:12px 22px}}
+
+/* ---------- Plates chooser ---------- */
+.choose{padding-block:clamp(56px,7vw,92px) clamp(48px,6vw,80px);text-align:center}
+.choose>.hand{font-size:1.8rem;color:var(--rumba);display:block;line-height:1}
+.choose h2{font-family:var(--display);font-size:clamp(2rem,4.4vw,3.2rem);margin-top:6px}
+.plates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,4vw,56px);margin-top:clamp(28px,4vw,44px)}
+.plate{text-decoration:none;color:inherit;display:grid;justify-items:center;align-content:start;gap:4px}
+.dish{position:relative;width:min(100%,270px);aspect-ratio:1;border-radius:50%;box-shadow:0 18px 30px rgba(43,27,23,.16),0 2px 4px rgba(43,27,23,.12);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.plate:hover .dish,.plate:focus-visible .dish{transform:rotate(-14deg) translateY(-6px)}
+.dish svg{position:absolute;inset:0;width:100%;height:100%}
+.dish img{position:absolute;inset:16%;width:68%;height:68%;border-radius:50%;object-fit:cover}
+.plate .t{font-family:var(--hand);font-weight:700;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1;margin-top:14px}
+.plate .s{font-weight:700;font-size:clamp(.82rem,1.6vw,1rem)}
+.plate .go{color:var(--cobalt);font-weight:800;font-size:.92rem}
+@media (max-width:520px){.plate .go{display:none}}
+
+/* ---------- Shelf (shop) ---------- */
+.wallpaper{background:repeating-linear-gradient(90deg, rgba(255,255,255,.22) 0 2px, transparent 2px 30px), var(--wall)}
+.tiendita{padding-block:clamp(56px,7vw,92px)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px 32px;margin-bottom:30px}
+.sec-head .hand{display:block;font-size:1.7rem;color:var(--rumba);line-height:1;margin-bottom:6px}
+.sec-head h2{font-family:var(--display);font-size:clamp(2.1rem,4.6vw,3.4rem)}
+.sec-head p{max-width:44ch;color:var(--ink-2)}
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px 10px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.08)), var(--wood);padding:10px 10px 16px;border-radius:12px;box-shadow:inset 0 0 0 2px rgba(0,0,0,.18), 0 20px 34px rgba(43,27,23,.2)}
+.shelf.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.shelf.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.shelf.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.shelf.c3 .pic{aspect-ratio:4/3}
+.cubby{position:relative;background:var(--paper-2);padding:16px 14px;display:flex;flex-direction:column;gap:6px;box-shadow:inset 0 12px 14px -10px rgba(0,0,0,.35);border-radius:4px;min-width:0}
+.cubby .pic{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 8px 12px -6px rgba(43,27,23,.35);aspect-ratio:1}
+.cubby .pic img{width:100%;height:100%;object-fit:cover}
+.cubby .mk{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--leaf);margin-top:8px}
+.cubby h3{font-family:var(--body);font-weight:800;font-size:1.06rem;line-height:1.25}
+.cubby p{font-size:.88rem;color:var(--ink-2)}
+.cubby select{width:100%;font:600 .9rem var(--body);padding:.6em .7em;border-radius:10px;border:1.5px solid rgba(43,27,23,.25);background:#fff;color:var(--ink);margin-top:4px}
+.cubby .buy{margin-top:auto;padding-top:10px;display:grid}
+.cubby .buy .btn{width:100%}
+.cubby.empty{display:grid;place-items:center;min-height:120px}
+.cubby.empty svg{width:64%;max-width:150px;aspect-ratio:1;transform:rotate(-8deg);filter:drop-shadow(0 8px 10px rgba(43,27,23,.28))}
+.ptag{position:absolute;top:24px;right:6px;z-index:2;background:radial-gradient(circle at 10px 50%, var(--paper-2) 3.2px, transparent 3.8px), var(--kraft);padding:.2em .55em .2em 1.25em;font-family:var(--hand);font-weight:700;font-size:1.45rem;line-height:1.05;clip-path:polygon(14px 0,100% 0,100% 100%,14px 100%,0 50%);transform:rotate(var(--rt,6deg));font-variant-numeric:tabular-nums;filter:drop-shadow(0 2px 1px rgba(0,0,0,.18))}
+.ptag.out{background:radial-gradient(circle at 10px 50%, var(--paper-2) 3.2px, transparent 3.8px), #CFC4B8}
+.collage .ptag{--rt:7deg;background:radial-gradient(circle at 10px 50%, var(--paper) 3.2px, transparent 3.8px), var(--kraft)}
+.shelf-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:30px}
+.shelf-cta span{color:var(--ink-2);font-weight:600}
+@media (max-width:1100px){.shelf.c5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:900px){.shelf.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.shelf.c5,.shelf.c3{grid-template-columns:repeat(2,minmax(0,1fr))}.shelf.c3 .pic{aspect-ratio:1}}
+@media (max-width:480px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 8px;padding:8px 8px 12px}.cubby{padding:12px 10px}.ptag{font-size:1.2rem;top:18px}.cubby h3{font-size:.95rem}.cubby p{display:none}}
+
+/* ---------- Salsa band ---------- */
+.nite{background:var(--night);color:#F4E9F7}
+.salsa-band{padding-block:clamp(56px,8vw,104px)}
+.salsa-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.salsa-art{position:relative;max-width:520px;width:100%}
+.salsa-art .vinyl-wrap{width:78%}
+.salsa-art .ph{position:absolute;right:0;bottom:-6%;width:52%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:6px solid var(--night);transform:rotate(4deg);box-shadow:0 18px 30px rgba(0,0,0,.35)}
+.salsa-band .hand{font-size:1.8rem;color:var(--gold);display:block;line-height:1}
+.salsa-band h2{font-family:var(--display);font-size:clamp(2.5rem,5.4vw,4.2rem);margin-top:6px;color:#fff}
+.salsa-band h2 span{color:var(--rumba)}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.facts span{background:var(--night-2);border-radius:999px;padding:.45em .95em;font-weight:700;font-variant-numeric:tabular-nums}
+.salsa-band p.blurb{margin-top:16px;opacity:.88;max-width:48ch}
+@media (max-width:860px){.salsa-grid{grid-template-columns:1fr}.salsa-art{margin-inline:auto;max-width:400px;margin-bottom:24px}}
+
+/* ---------- Polaroids ---------- */
+.pol{margin:0;background:#fff;padding:10px 10px 0;box-shadow:0 12px 26px rgba(43,27,23,.14),0 1px 2px rgba(43,27,23,.18);transform:rotate(var(--r,0deg));position:relative;transition:transform .25s ease}
+.pol:hover{transform:rotate(0deg) scale(1.03);z-index:6}
+.pol img{width:100%;height:clamp(150px,19vw,240px);object-fit:cover;background:var(--paper-2)}
+.pol figcaption{font-family:var(--hand);font-weight:500;font-size:1.3rem;text-align:center;padding:8px 6px 12px;line-height:1.1}
+.pol::before{content:"";position:absolute;top:-11px;left:50%;width:84px;height:24px;transform:translateX(-50%) rotate(var(--t,-3deg));background:rgba(216,185,138,.8);box-shadow:0 1px 2px rgba(0,0,0,.08);z-index:1}
+.pol.wide{grid-column:span 2}
+.peek{padding-block:clamp(56px,7vw,92px)}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 22px;grid-auto-flow:dense}
+@media (max-width:820px){.wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px}.pol img{height:150px}}
+
+/* ---------- Visit strip ---------- */
+.visit-strip{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-bottom:clamp(56px,7vw,92px)}
+.visit-strip .photo{border-radius:24px;overflow:hidden;border:7px solid #fff;box-shadow:0 18px 34px rgba(43,27,23,.18)}
+.visit-strip .photo img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.visit-strip h2{font-family:var(--display);font-size:clamp(2rem,4vw,3rem)}
+.visit-strip .addr{font-weight:700;font-size:1.15rem;margin-top:12px}
+.visit-strip .meta{color:var(--ink-2);margin-top:6px}
+@media (max-width:860px){.visit-strip{grid-template-columns:1fr}}
+
+/* ---------- Page bands ---------- */
+.band{position:relative;color:#fff;min-height:clamp(240px,30vw,360px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;background:var(--ink)}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top, rgba(28,16,12,.9), rgba(28,16,12,.15) 72%)}
+.band.nite-b::after{background:linear-gradient(to top, rgba(36,16,45,.96), rgba(36,16,45,.25) 75%)}
+.band .wrap{width:100%;padding-block:30px 34px}
+.band .hand{font-size:1.8rem;color:var(--gold);line-height:1;display:block;margin-bottom:6px}
+.band h1{font-family:var(--display);font-size:clamp(2.6rem,6vw,4.6rem)}
+.band p{max-width:54ch;margin-top:10px;font-size:1.08rem;opacity:.94}
+.band .ctas{margin-top:20px}
+.page{padding-block:clamp(40px,6vw,72px)}
+
+/* ---------- Shop page ---------- */
+.shop-head{background:radial-gradient(circle at 85% 20%, rgba(255,255,255,.35), transparent 40%), var(--kraft);padding-block:clamp(36px,5vw,64px) clamp(28px,4vw,44px);position:relative;overflow:hidden}
+.shop-head .hand{font-size:1.8rem;color:var(--cobalt);line-height:1}
+.shop-head h1{font-family:var(--display);font-size:clamp(3rem,8vw,6rem);margin-top:4px}
+.shop-head p{max-width:50ch;margin-top:10px;font-size:1.08rem}
+.perks{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.perks span{background:var(--plate);border-radius:999px;padding:.45em .95em;font-weight:700;font-size:.92rem}
+.shop-head .deco{position:absolute;right:max(var(--g), calc((100vw - var(--max)) / 2 + var(--g)));top:50%;transform:translateY(-50%) rotate(-10deg);width:clamp(120px,18vw,220px);aspect-ratio:1;border-radius:50%;box-shadow:0 18px 30px rgba(43,27,23,.2)}
+.shop-head .deco svg{width:100%;height:100%;display:block}
+.shop-head .deco img{position:absolute;inset:16%;width:68%;height:68%;border-radius:50%;object-fit:cover}
+@media (max-width:760px){.shop-head .deco{display:none}}
+.cats{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);z-index:30;background:var(--paper);border-bottom:1px solid var(--line);padding-block:16px 12px}
+.cats .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.cats .wrap::-webkit-scrollbar{display:none}
+.chip{font:700 .92rem var(--body);padding:.6em 1.05em;border-radius:999px;border:0;cursor:pointer;background:var(--paper-2);color:var(--ink);white-space:nowrap;text-decoration:none;flex:none}
+.chip:hover{background:var(--kraft)}
+.chip[aria-pressed="true"],.chip[aria-current="true"]{background:var(--ink);color:#fff}
+.chip em{font-style:normal;opacity:.6;margin-left:4px}
+.cat-block{padding-top:clamp(40px,5vw,64px);scroll-margin-top:150px}
+.cat-block .sec-head{margin-bottom:22px}
+.shop-foot{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.shop-foot div{background:var(--paper-2);border-radius:18px;padding:18px 20px}
+.shop-foot b{display:block;font-family:var(--display);font-weight:400;font-size:1.3rem;margin-bottom:4px}
+.shop-foot p{color:var(--ink-2);font-size:.95rem}
+@media (max-width:760px){.shop-foot{grid-template-columns:1fr}}
+
+/* ---------- Café ---------- */
+.cafe-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+.board{background:radial-gradient(ellipse at 25% 15%, rgba(255,255,255,.07), transparent 55%),radial-gradient(ellipse at 80% 85%, rgba(255,255,255,.05), transparent 50%),var(--chalk);color:var(--chalk-ink);border:14px solid var(--wood);border-radius:16px;box-shadow:inset 0 0 50px rgba(0,0,0,.5),0 16px 34px rgba(43,27,23,.22);padding:clamp(18px,3vw,32px)}
+.board h2{font-family:var(--hand);font-weight:700;font-size:2.6rem;line-height:1}
+.board .lede{font-size:.92rem;opacity:.75;margin-top:4px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:16px;border-bottom:1px dashed rgba(242,238,227,.25);padding-bottom:6px}
+.tabs button{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1.2;background:none;border:0;border-bottom:3px solid transparent;color:rgba(242,238,227,.55);padding:.05em .25em;cursor:pointer}
+.tabs button:hover{color:var(--chalk-ink)}
+.tabs button[aria-selected="true"]{color:#fff;border-bottom-color:var(--gold)}
+.board ul{list-style:none;margin:14px 0 0;padding:0;columns:2 230px;column-gap:36px}
+.board li{break-inside:avoid;padding:9px 0;border-bottom:1px dashed rgba(242,238,227,.16)}
+.board li b{display:block;font-family:var(--hand);font-weight:700;font-size:1.55rem;line-height:1.05}
+.board li span{font-size:.9rem;opacity:.72}
+.board .gf{font:800 .66rem var(--body);letter-spacing:.06em;color:var(--chalk);background:var(--gold);padding:.15em .45em;border-radius:5px;vertical-align:middle;margin-left:6px}
+.chalk-notes{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:.88rem;opacity:.85}
+.chalk-notes b{color:var(--gold)}
+.stack{display:grid;grid-template-columns:1fr 1fr;gap:26px 16px;padding-top:8px}
+.stack .pol img{height:clamp(140px,15vw,200px)}
+.stack .pol.wide img{height:clamp(160px,18vw,240px)}
+.eco{grid-column:1/-1;background:var(--wall);border-radius:18px;padding:16px 18px;display:flex;gap:14px;align-items:center}
+.eco b{font-family:var(--display);font-weight:400;font-size:2.2rem;line-height:1;color:var(--leaf)}
+.take{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px 28px;align-items:center;background:var(--night);color:#fff;border-radius:24px;padding:clamp(20px,3vw,32px)}
+.take img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:5px solid var(--gold)}
+.take h3{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem)}
+.take p{opacity:.85;margin-top:4px}
+.take .ctas{margin-top:0}
+@media (max-width:900px){.cafe-grid{grid-template-columns:1fr}.take{grid-template-columns:1fr}.take img{display:none}}
+
+/* ---------- Dance ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.nite .chip{background:var(--night-2);color:#F4E9F7}
+.nite .chip:hover{background:var(--night-3)}
+.nite .chip[aria-pressed="true"]{background:var(--gold);color:var(--night)}
+.tt-day{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid rgba(255,255,255,.1)}
+.tt-day h3{font-family:var(--display);font-size:1.7rem;line-height:1}
+.tt-day h3 small{display:block;font-family:var(--hand);font-weight:700;font-size:1.25rem;color:var(--gold);margin-top:4px}
+.tt-day.today{background:linear-gradient(90deg, rgba(255,194,61,.12), transparent 60%);border-radius:16px;border-top-color:transparent;padding-inline:12px;margin-inline:-12px}
+.tt-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.cls{display:grid;grid-template-columns:104px minmax(0,1fr);background:var(--night-2);border-radius:16px;overflow:hidden;min-height:124px}
+.cls .ph{width:104px;height:100%;object-fit:cover}
+.cls .art{display:grid;place-items:center;font-family:var(--hand);font-weight:700;font-size:1.9rem;color:var(--night);text-align:center;line-height:1}
+.cls .art.dance{background:var(--rumba)}
+.cls .art.mind{background:#8BD8B4}
+.cls .art.culture{background:var(--gold)}
+.cls .b{padding:12px 14px;display:grid;gap:2px;align-content:start}
+.cls time{font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums;font-size:.95rem}
+.cls b{font-size:1.08rem;line-height:1.25}
+.cls .m{font-size:.86rem;opacity:.8}
+.cls .act{margin-top:8px;justify-self:start}
+.cls a.act{font-size:.9rem;font-weight:800;color:var(--rumba);text-underline-offset:3px}
+.cls button.act{font:800 .85rem var(--body);background:var(--gold);color:var(--night);border:0;border-radius:999px;padding:.5em .9em;cursor:pointer}
+.tt-note{margin-top:16px;font-size:.9rem;opacity:.7}
+.tt-empty{padding:24px;border-radius:16px;background:var(--night-2);text-align:center}
+@media (max-width:640px){.tt-day{grid-template-columns:1fr;gap:10px}.tt-day h3 small{display:inline;margin-left:8px}}
+.count{margin-top:24px;background:var(--night-2);border-radius:20px;padding:18px}
+.count-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.seg{display:inline-flex;background:var(--night);border-radius:999px;padding:4px}
+.seg button{font:700 .9rem var(--body);border:0;background:transparent;color:#F4E9F7;padding:.45em .95em;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--rumba);color:#fff}
+.beats{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:14px}
+.beat{border-radius:12px;background:var(--night);text-align:center;padding:10px 0 8px;display:grid;gap:2px;transition:transform .12s ease}
+.beat .num{font-family:var(--display);font-size:1.5rem;line-height:1}
+.beat .lb{font-size:.66rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.75}
+.beat.brk{background:var(--rumba);color:#fff}
+.beat.rest{opacity:.45}
+.beat.on{transform:translateY(-4px);box-shadow:0 0 0 3px var(--gold)}
+.count p{margin-top:12px;font-size:.92rem;opacity:.85}
+.count .btn{margin-top:14px}
+@media (max-width:420px){.beat .lb{font-size:.56rem}}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px}
+@media (max-width:700px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- Room ---------- */
+.room-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.nums div{background:var(--wall);border-radius:18px;padding:16px;display:grid;gap:2px}
+.nums b{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1}
+.nums span{font-size:.88rem;font-weight:600}
+.incl{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.incl li{display:flex;gap:10px;align-items:baseline}
+.incl li::before{content:"✓";font-weight:800;color:var(--leaf)}
+.host{margin-top:24px;background:var(--paper-2);border-radius:18px;padding:18px 20px}
+.host b{display:block;font-size:1.05rem;margin-bottom:4px}
+.host p{color:var(--ink-2)}
+form.req{background:#fff;border-radius:22px;padding:clamp(20px,3vw,30px);box-shadow:0 0 0 1px var(--line),0 18px 36px rgba(43,27,23,.08);display:grid;gap:14px}
+form.req h2{font-family:var(--display);font-size:1.9rem}
+form.req .sub{color:var(--ink-2);margin-top:-6px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{display:grid;gap:5px;min-width:0}
+.f label{font-weight:700;font-size:.9rem}
+.f input,.f select,.f textarea{font:500 1rem var(--body);padding:.75em .9em;border:1.5px solid rgba(43,27,23,.25);border-radius:12px;background:var(--paper);color:var(--ink);width:100%;min-width:0}
+.f textarea{min-height:88px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:3px solid var(--cobalt);outline-offset:1px;border-color:transparent}
+.err{color:#C0153A;font-weight:700;font-size:.92rem}
+.done{background:var(--paper-2);border-radius:16px;padding:16px;display:grid;gap:10px}
+.done pre{margin:0;white-space:pre-wrap;font:500 .9rem/1.5 var(--body)}
+@media (max-width:860px){.room-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.row2,.incl{grid-template-columns:1fr}.nums b{font-size:1.3rem}}
+
+/* ---------- Visit page ---------- */
+.visit-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px)}
+.big-addr{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15}
+.visit-grid .park{margin-top:14px;max-width:46ch;color:var(--ink-2)}
+.contact{display:grid;gap:10px;margin-top:22px}
+.contact div{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.contact .k{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);width:64px}
+.contact a{font-weight:700;font-size:1.1rem;text-underline-offset:3px}
+.copy{font:700 .78rem var(--body);background:var(--paper-2);border:0;border-radius:999px;padding:.35em .8em;cursor:pointer;color:var(--ink)}
+.copy:hover{background:var(--kraft)}
+.hours{background:#fff;border-radius:22px;padding:clamp(18px,3vw,26px);box-shadow:0 0 0 1px var(--line)}
+.hours h2{font-family:var(--display);font-size:1.7rem;margin-bottom:6px}
+.hours table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:10px 2px;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:#D2224A;font-weight:800}
+.hours .x{margin-top:12px;font-size:.9rem;color:var(--ink-2)}
+.story{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(56px,7vw,88px)}
+.story .pol img{height:clamp(260px,32vw,420px)}
+.story h2{font-family:var(--display);font-size:clamp(2rem,4vw,3rem)}
+.story .hand{font-size:1.6rem;color:var(--rumba);display:block;line-height:1;margin-bottom:6px}
+.story p{margin-top:14px;max-width:58ch}
+.story .sig{font-family:var(--hand);font-weight:700;font-size:1.7rem;color:var(--leaf);margin-top:18px}
+@media (max-width:860px){.visit-grid,.story{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+.site-foot{background:var(--ink);color:#D8CABB;padding-block:44px 40px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px}
+.foot .brand .n{color:#fff;font-size:1.5rem}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.foot nav a{text-decoration:none;font-weight:600}
+.foot nav a:hover{color:var(--gold)}
+.credits{width:100%;font-size:.8rem;color:#9C8B7C;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+.credits a{color:#C9B8A6}
+
+/* ---------- Cart drawer ---------- */
+.scrim{position:fixed;inset:0;background:rgba(20,10,8,.5);z-index:90}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:var(--paper);z-index:100;display:flex;flex-direction:column;box-shadow:-20px 0 40px rgba(0,0,0,.22);padding-top:env(safe-area-inset-top,0px)}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:var(--ink);color:#fff}
+.dhead h2{font-family:var(--display);font-size:1.6rem}
+.dhead button{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:999px;padding:.5em .9em;font:700 .9rem var(--body);cursor:pointer}
+.ditems{flex:1;overflow:auto;padding:8px 20px}
+.citem{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;padding:14px 0;border-bottom:1px dashed var(--line);align-items:center}
+.citem img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#fff}
+.citem b{display:block;font-size:.98rem;line-height:1.25}
+.citem small{color:var(--ink-2)}
+.citem .r{display:grid;justify-items:end;gap:6px;font-weight:800;font-variant-numeric:tabular-nums}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;background:#fff}
+.qty button{width:30px;height:30px;border:0;background:none;font:800 1rem var(--body);cursor:pointer;color:var(--ink)}
+.qty span{min-width:22px;text-align:center;font-weight:800}
+.rm{background:none;border:0;color:var(--ink-2);font:600 .8rem var(--body);text-decoration:underline;cursor:pointer;padding:0}
+.dempty{text-align:center;padding:40px 10px;display:grid;gap:14px;justify-items:center}
+.dempty .hand{font-size:2rem}
+.dfoot{padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:grid;gap:10px;background:var(--paper-2)}
+.dfoot .sum{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.dfoot small{color:var(--ink-2)}
+.dfoot .btn{width:100%}
+
+/* ---------- Mobile dock & toast ---------- */
+.dock{display:none}
+@media (max-width:700px){
+  .dock{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--ink);padding:8px 6px calc(8px + env(safe-area-inset-bottom,0px))}
+  .dock a,.dock button{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;color:#fff;font:700 .78rem var(--body);padding:6px;border-radius:12px;background:none;border:0;cursor:pointer;position:relative}
+  .dock .hot{background:var(--gold);color:var(--ink)}
+  .dock svg{width:22px;height:22px}
+  .dock .badge{position:absolute;top:2px;right:18%;min-width:18px;height:18px;border-radius:999px;background:var(--rumba);color:#fff;font-size:.7rem;display:grid;place-items:center;padding:0 4px}
+  body{padding-bottom:80px}
+}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:.55em .6em .55em 1.1em;border-radius:999px;font-weight:700;z-index:110;display:flex;align-items:center;gap:12px;max-width:calc(100% - 32px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.toast button{background:var(--gold);color:var(--ink);border:0;border-radius:999px;padding:.5em .9em;font:800 .85rem var(--body);cursor:pointer;white-space:nowrap}
+@media (max-width:700px){.toast{bottom:96px}}
+
+@media (prefers-reduced-motion: reduce){
+  .vinyl{animation:none}
+  .dish,.pol,.btn,.beat{transition:none}
+  .cart-btn.bump{animation:none}
+}
+</style>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Ceramic plate artwork (El Carmen de Viboral style), reused by every plate -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="fl">
+      <g transform="translate(100 14.5)">
+        <g fill="#1F4FB4">
+          <ellipse rx="3.1" ry="5.6" cy="-4.8"/>
+          <ellipse rx="3.1" ry="5.6" cy="-4.8" transform="rotate(72)"/>
+          <ellipse rx="3.1" ry="5.6" cy="-4.8" transform="rotate(144)"/>
+          <ellipse rx="3.1" ry="5.6" cy="-4.8" transform="rotate(216)"/>
+          <ellipse rx="3.1" ry="5.6" cy="-4.8" transform="rotate(288)"/>
+        </g>
+        <circle r="2.6" fill="#FFC23D"/>
+      </g>
+    </g>
+    <g id="lf">
+      <g transform="translate(100 13)">
+        <path d="M-7 3 C-2 -6 4 -6 7 -1 C2 2 -2 4 -7 3Z" fill="#2E6B45"/>
+        <circle cx="0" cy="9" r="1.9" fill="#E2333F"/>
+      </g>
+    </g>
+    <symbol id="rim" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="99" fill="#FFFDF8"/>
+      <circle cx="100" cy="100" r="96.5" fill="none" stroke="#1F4FB4" stroke-width="2.5"/>
+      <use href="#fl"/><use href="#fl" transform="rotate(30 100 100)"/><use href="#fl" transform="rotate(60 100 100)"/><use href="#fl" transform="rotate(90 100 100)"/><use href="#fl" transform="rotate(120 100 100)"/><use href="#fl" transform="rotate(150 100 100)"/><use href="#fl" transform="rotate(180 100 100)"/><use href="#fl" transform="rotate(210 100 100)"/><use href="#fl" transform="rotate(240 100 100)"/><use href="#fl" transform="rotate(270 100 100)"/><use href="#fl" transform="rotate(300 100 100)"/><use href="#fl" transform="rotate(330 100 100)"/>
+      <use href="#lf" transform="rotate(15 100 100)"/><use href="#lf" transform="rotate(45 100 100)"/><use href="#lf" transform="rotate(75 100 100)"/><use href="#lf" transform="rotate(105 100 100)"/><use href="#lf" transform="rotate(135 100 100)"/><use href="#lf" transform="rotate(165 100 100)"/><use href="#lf" transform="rotate(195 100 100)"/><use href="#lf" transform="rotate(225 100 100)"/><use href="#lf" transform="rotate(255 100 100)"/><use href="#lf" transform="rotate(285 100 100)"/><use href="#lf" transform="rotate(315 100 100)"/><use href="#lf" transform="rotate(345 100 100)"/>
+      <circle cx="100" cy="100" r="73.5" fill="none" stroke="#1F4FB4" stroke-width="2.5"/>
+      <circle cx="100" cy="100" r="69.5" fill="none" stroke="#E2333F" stroke-width="1.2" stroke-dasharray="1.5 4"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#home" aria-label="Taste of Colombia home">
+      <img src="images/logo-badge.png" alt="" width="46" height="46">
+      <span><span class="n">Taste of Colombia</span><span class="s">café, gift shop &amp; El Salón</span></span>
+    </a>
+    <ul class="nav" id="nav">
+      <li><a class="shop-link" href="#shop" data-v="shop">Shop</a></li>
+      <li><a href="#cafe" data-v="cafe">Café menu</a></li>
+      <li><a href="#dance" data-v="dance">Dance classes</a></li>
+      <li><a href="#room" data-v="room">Rent El Salón</a></li>
+      <li><a href="#visit" data-v="visit">Visit</a></li>
+    </ul>
+    <span class="pill" id="pill" role="status"><span class="dot"></span><span id="pillText">Checking hours…</span></span>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav">☰ Browse</button>
+    <button class="cart-btn" id="cartBtn" type="button" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="lbl">Cart</span><span class="badge" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= HOME ======================= -->
+<section class="view" id="v-home" aria-label="Home">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">Bronte Road, Oakville · desde 2012</p>
+        <h1>Coffee by day.<br><span class="swoosh">Salsa by night.<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 70 6, 150 4, 296 14" fill="none" stroke="#FFC23D" stroke-width="7" stroke-linecap="round"/></svg></span></h1>
+        <p class="lede">A little Colombian café and gift shop with a dance room next door. Fair-trade coffee and pan de yuca in the morning, salsa classes after dark.</p>
+        <div class="ctas">
+          <a class="btn rumba" href="#shop">Shop coffee &amp; gifts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn plain" href="#dance">This week's classes</a>
+        </div>
+      </div>
+      <div class="collage">
+        <div class="arch"><img src="images/cafe-arch.jpg" alt="The window bar inside Taste of Colombia, with plants and a pendant lamp"></div>
+        <div class="vinyl-wrap" aria-hidden="true"><div class="vinyl"><div class="lbl"><b>Salsa</b><i>sábados</i></div></div></div>
+        <figure class="pol" style="--r:-7deg;--t:4deg"><img src="images/dance-barre-3.jpg" alt="Dance class at the barre in El Salón"><figcaption>El Salón</figcaption></figure>
+        <span class="ptag"><small>beans from</small>$20.50</span>
+        <span class="note n1" aria-hidden="true">our window bar<svg viewBox="0 0 60 44" fill="none" stroke="#2B1B17" stroke-width="2.4" stroke-linecap="round"><path d="M6 4 C 10 26, 26 36, 52 36"/><path d="M44 29 L53 36 L43 41"/></svg></span>
+        <span class="note n2" aria-hidden="true">salsa every Saturday!<svg viewBox="0 0 60 44" fill="none" stroke="#2B1B17" stroke-width="2.4" stroke-linecap="round"><path d="M54 4 C 52 22, 40 32, 14 38"/><path d="M22 31 L13 38 L23 43"/></svg></span>
+      </div>
+    </div>
+    <div class="ticket" aria-live="polite">
+      <div class="stub"><span class="hand" id="tWhen">Hoy</span><small id="tDay">Today</small></div>
+      <div class="tbody">
+        <span class="tchip" id="tCafe">…</span>
+        <span id="tEvents" style="display:contents"></span>
+        <a class="link" href="#dance">Full week →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap choose">
+    <span class="hand">¿Qué se te antoja?</span>
+    <h2>What are you in the mood for?</h2>
+    <div class="plates">
+      <a class="plate" href="#cafe">
+        <span class="dish"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#rim"/></svg><img src="images/chemex.jpg" alt=""></span>
+        <span class="t">Un cafecito</span><span class="s">Coffee &amp; a bite</span><span class="go">See the menu →</span>
+      </a>
+      <a class="plate" href="#dance">
+        <span class="dish"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#rim"/></svg><img src="images/salsa-couple.jpg" alt="" style="object-position:50% 30%"></span>
+        <span class="t">¡A bailar!</span><span class="s">Salsa &amp; classes</span><span class="go">See this week →</span>
+      </a>
+      <a class="plate" href="#shop">
+        <span class="dish"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#rim"/></svg><img src="images/v60.jpg" alt=""></span>
+        <span class="t">Un regalito</span><span class="s">Beans, gifts &amp; more</span><span class="go">Go to the shop →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="ceramic" aria-hidden="true"></div>
+
+  <div class="wallpaper tiendita">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="hand">la tiendita</span><h2>Shop our shelf</h2></div>
+        <p>Freshly roasted, bird-friendly beans, handmade Colombian ceramics and gift cards. Add to your cart here, then check out on our secure store.</p>
+      </div>
+      <div class="shelf four" id="homeShelf"></div>
+      <div class="shelf-cta">
+        <a class="btn" href="#shop">Shop all 16 items <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn plain" href="#shop-gifts">Gift cards &amp; gifts</a>
+        <span>Ground to order: whole bean, espresso, pour-over or French press.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="nite salsa-band">
+    <div class="wrap salsa-grid">
+      <div class="salsa-art">
+        <div class="vinyl-wrap" aria-hidden="true"><div class="vinyl"><div class="lbl"><b>Salsa Night</b><i>6–11 pm</i></div></div></div>
+        <img class="ph" src="images/salsa-cafe.jpg" alt="Couples dancing salsa in a warmly lit café" loading="lazy">
+      </div>
+      <div>
+        <span class="hand">los sábados</span>
+        <h2>Salsa <span>Night</span></h2>
+        <div class="facts"><span>Every Saturday</span><span>6–11 pm</span><span>$25</span><span>No partner needed</span></div>
+        <p class="blurb">It started with Yury's salsa record collection playing in the café. Customers kept asking to dance, and Salsa Night has been going for more than 13 years. On weeknights El Salón runs salsa classes, Latin Vibes, Dance Essentials and more.</p>
+        <div class="ctas">
+          <a class="btn gold" href="#dance">See this week's classes</a>
+          <button class="btn rumba" type="button" data-add="dance">Drop in to Dance Essentials · $20</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap peek">
+    <div class="sec-head">
+      <div><span class="hand">¡pasa adelante!</span><h2>Come on in</h2></div>
+      <p>A sunny café on one side, a dance room with wood floors and a barre on the other. Salsa is always playing.</p>
+    </div>
+    <div class="wall">
+      <figure class="pol wide" style="--r:-1.5deg"><img src="images/cafe-interior.jpg" alt="Café interior with a live-edge table, colourful armchair and espresso machine" loading="lazy"><figcaption>Pull up a chair</figcaption></figure>
+      <figure class="pol" style="--r:2deg;--t:4deg"><img src="images/empanadas.jpg" alt="Golden empanadas with lime and ají" loading="lazy"><figcaption>Empanadas + ají</figcaption></figure>
+      <figure class="pol" style="--r:-2deg"><img src="images/dance-barre-1.jpg" alt="Dance class with arms raised" loading="lazy"><figcaption>Arms up!</figcaption></figure>
+      <figure class="pol" style="--r:1.5deg;--t:2deg"><img src="images/cups-beans.jpg" alt="Colourful cups and coffee beans" loading="lazy"><figcaption>Fresh roasted, always</figcaption></figure>
+      <figure class="pol" style="--r:-2.5deg;--t:5deg"><img src="images/mug-heart.jpg" alt="Hand-painted heart mug" loading="lazy"><figcaption>Hecho a mano</figcaption></figure>
+      <figure class="pol wide" style="--r:1deg;--t:-4deg"><img src="images/el-salon.jpg" alt="El Salón with wood floors, mirrors and art" loading="lazy"><figcaption>El Salón, right next door</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="wrap visit-strip">
+    <div class="photo"><img src="images/storefront.jpg" alt="Taste of Colombia storefront with its black awning on Bronte Road" loading="lazy"></div>
+    <div>
+      <span class="hand" style="font-size:1.6rem;color:var(--rumba)">visítanos</span>
+      <h2>Find the black awning</h2>
+      <p class="addr">67 Bronte Road, Units 2 &amp; 3, Oakville</p>
+      <p class="meta" id="visitToday">Free parking behind the building.</p>
+      <div class="ctas">
+        <a class="btn cobalt" href="https://g.page/tasteofcolombiacafe?share" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn plain" href="#visit">Hours &amp; contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SHOP ======================= -->
+<section class="view" id="v-shop" aria-label="Shop" hidden>
+  <div class="shop-head">
+    <div class="wrap">
+      <span class="hand">la tiendita</span>
+      <h1>The Shop</h1>
+      <p>Coffee beans, handmade gifts, gift cards, classes and barista training. Add what you like to your cart and check out on our secure store.</p>
+      <div class="perks"><span>Organic &amp; bird-friendly beans</span><span>Handmade in Colombia</span><span>Gift cards never expire</span></div>
+    </div>
+    <div class="deco" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#rim"/></svg><img src="images/cups-beans.jpg" alt=""></div>
+  </div>
+  <div class="cats"><div class="wrap" id="cats" role="navigation" aria-label="Shop sections"></div></div>
+  <div class="wrap" style="padding-bottom:clamp(56px,7vw,92px)">
+    <div id="shopBlocks"></div>
+    <div class="shop-foot">
+      <div><b>Secure checkout</b><p>Payment, pickup and delivery options are handled on our Shopify store.</p></div>
+      <div><b>Fresh every week</b><p>We only stock freshly roasted beans. Organic, fair or direct trade, shade-grown.</p></div>
+      <div><b>Questions?</b><p>Call (289) 837-3021 or email info@tasteofcolombia.ca.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CAFÉ ======================= -->
+<section class="view" id="v-cafe" aria-label="Café menu" hidden>
+  <div class="band">
+    <img src="images/cafe-interior.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <span class="hand">el café</span>
+      <h1>The Café</h1>
+      <p>Organic, fair-trade, shade-grown and bird-friendly coffee, always freshly roasted. Plus the Colombian bakery treats we grew up on.</p>
+    </div>
+  </div>
+  <div class="ceramic" aria-hidden="true"></div>
+  <div class="wrap page">
+    <div class="cafe-grid">
+      <div class="board">
+        <h2>Today's board</h2>
+        <p class="lede">Any drink can be made decaf. Prices are on the board at the counter.</p>
+        <div class="tabs" role="tablist" aria-label="Menu sections" id="tabs"></div>
+        <ul id="menuList" role="tabpanel"></ul>
+        <div class="chalk-notes"><span><b>Milk swaps:</b> soy, almond, oat, lactose-free</span><span><b>Bistro bar:</b> 19+ with ID</span></div>
+      </div>
+      <div class="stack">
+        <figure class="pol wide" style="--r:1.5deg"><img src="images/empanadas.jpg" alt="Empanadas with lime and ají" loading="lazy"><figcaption>Beef &amp; potato empanadas</figcaption></figure>
+        <figure class="pol" style="--r:-2.5deg;--t:3deg"><img src="images/arepa.jpg" alt="A grilled arepa" loading="lazy"><figcaption>Arepa time</figcaption></figure>
+        <figure class="pol" style="--r:2deg;--t:-4deg"><img src="images/pourover.jpg" alt="Pour-over coffee brewing" loading="lazy"><figcaption>Slow pour-over</figcaption></figure>
+        <div class="eco"><b>5%</b><span><strong>Bring your own mug</strong> and save 5% on your coffee.</span></div>
+      </div>
+    </div>
+    <div class="take">
+      <img src="images/empanadas.jpg" alt="" loading="lazy">
+      <div><h3>Having a party?</h3><p>Order a tray of 30 empanadas with ají and cilantro sauce for $172.50. Pickup at the café.</p></div>
+      <div class="ctas"><button class="btn gold" type="button" data-add="empanadas">Add tray to cart</button><a class="btn rumba" href="#shop-coffee">Shop our beans</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DANCE ======================= -->
+<section class="view nite" id="v-dance" aria-label="Dance classes" hidden>
+  <div class="band nite-b">
+    <img src="images/salsa-crowd.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <span class="hand">clases en El Salón</span>
+      <h1>Dance &amp; Classes</h1>
+      <p>Everything happens in El Salón, the room right beside the café. Grab a coffee, then come dance.</p>
+    </div>
+  </div>
+  <div class="wrap page">
+    <div class="sec-head">
+      <div><span class="hand" style="color:var(--gold)">esta semana</span><h2 style="color:#fff">This week</h2></div>
+      <p style="color:#D9C8E0">Today is highlighted. Pick a type of class to narrow the list.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter classes" id="filters"></div>
+    <div id="timetable"></div>
+    <p class="tt-note">From our weekly El Salón calendar. Some workshops run monthly, so message us or check Instagram before you come.</p>
+
+    <div class="salsa-grid" id="salsa-night" style="margin-top:clamp(56px,8vw,96px);scroll-margin-top:100px">
+      <div class="salsa-art">
+        <div class="vinyl-wrap" aria-hidden="true"><div class="vinyl"><div class="lbl"><b>Salsa Night</b><i>sábados</i></div></div></div>
+        <img class="ph" src="images/salsa-dip.jpg" alt="A salsa dip on stage" loading="lazy">
+      </div>
+      <div class="salsa-band" style="padding:0">
+        <span class="hand">new to salsa?</span>
+        <h2>Learn the <span>count</span></h2>
+        <div class="count">
+          <div class="count-top">
+            <b>Pick a timing</b>
+            <div class="seg" role="group" aria-label="Salsa timing">
+              <button type="button" data-on="1" aria-pressed="true">On1</button>
+              <button type="button" data-on="2" aria-pressed="false">On2</button>
+            </div>
+          </div>
+          <div class="beats" id="beats" aria-hidden="true"></div>
+          <p id="countText"></p>
+          <button class="btn rumba" type="button" id="playCount">▶ Play the count</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(56px,8vw,96px)">
+      <div class="sec-head">
+        <div><span class="hand" style="color:var(--gold)">los miércoles</span><h2 style="color:#fff">Dance Essentials</h2></div>
+        <p style="color:#D9C8E0">Strength, flexibility, balance and technique for dancers and non-dancers, with Carolina Vitorino. Wednesdays 6:30–7:30 pm, $20 drop-in, all levels.</p>
+      </div>
+      <div class="strip">
+        <img src="images/dance-barre-1.jpg" alt="Dance Essentials students with arms raised" loading="lazy">
+        <img src="images/dance-barre-2.jpg" alt="Students at the barre in El Salón" loading="lazy">
+        <img src="images/dance-barre-3.jpg" alt="Barre exercises in El Salón" loading="lazy">
+        <img src="images/dance-barre-4.jpg" alt="A line of students at the barre" loading="lazy">
+      </div>
+      <div class="ctas">
+        <button class="btn gold" type="button" data-add="dance">Add a drop-in to cart · $20</button>
+        <a class="btn rumba" href="#room">Teach your own class here</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ROOM ======================= -->
+<section class="view" id="v-room" aria-label="Rent El Salón" hidden>
+  <div class="band">
+    <img src="images/el-salon.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <span class="hand">alquila El Salón</span>
+      <h1>Rent El Salón</h1>
+      <p>A bright room with wood floors, mirrors and a barre, right beside the café. Great for birthdays, showers, workshops and weekly classes.</p>
+    </div>
+  </div>
+  <div class="ceramic" aria-hidden="true"></div>
+  <div class="wrap page">
+    <div class="room-grid">
+      <div>
+        <div class="nums">
+          <div><b>$75</b><span>per hour + HST</span></div>
+          <div><b>3 hrs</b><span>minimum booking</span></div>
+          <div><b>50%</b><span>deposit holds your date</span></div>
+        </div>
+        <ul class="incl">
+          <li>Speakers and a screen</li><li>Wi-Fi</li><li>Private bathroom</li><li>Chairs and tables</li>
+          <li>LCBO licensed</li><li>Coffee and food from the café</li><li>Free parking behind the units</li><li>Back entrance from the lot</li>
+        </ul>
+        <div class="host">
+          <b>Teaching a class or running an event?</b>
+          <p>When you rent El Salón, we add your class to our weekly calendar and share it on our social channels and newsletters. We can also sell your tickets through our online shop.</p>
+        </div>
+        <p style="margin-top:14px;font-size:.88rem;color:var(--ink-2)">The deposit is non-refundable if you cancel. We book around our regular classes, so ask early.</p>
+      </div>
+      <form class="req" id="req" novalidate>
+        <h2>Ask for a date</h2>
+        <p class="sub">Fill this in and we'll write the email for you.</p>
+        <div class="row2">
+          <div class="f"><label for="rName">Your name</label><input id="rName" autocomplete="name" required></div>
+          <div class="f"><label for="rEmail">Email</label><input id="rEmail" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row2">
+          <div class="f"><label for="rDate">Date</label><input id="rDate" type="date" required></div>
+          <div class="f"><label for="rHours">How long?</label><select id="rHours"><option>3 hours</option><option>4 hours</option><option>5 hours</option><option>6 hours or more</option><option>A weekly class</option></select></div>
+        </div>
+        <div class="row2">
+          <div class="f"><label for="rGuests">Guests</label><input id="rGuests" type="number" min="1" inputmode="numeric" placeholder="25"></div>
+          <div class="f"><label for="rType">Type of event</label><select id="rType"><option>Birthday or celebration</option><option>Class or workshop</option><option>Work or team event</option><option>Something else</option></select></div>
+        </div>
+        <div class="f"><label for="rNotes">Anything else?</label><textarea id="rNotes" placeholder="Start time, food, music, accessibility…"></textarea></div>
+        <p class="err" id="rErr" role="alert" hidden></p>
+        <button class="btn rumba" type="submit">Write my request</button>
+        <div class="done" id="rDone" hidden>
+          <p><b>Your request is ready.</b> Send it to info@tasteofcolombia.ca and we'll tell you if the date is free.</p>
+          <pre id="rText"></pre>
+          <div class="ctas" style="margin-top:0"><a class="btn" id="rMail" href="mailto:info@tasteofcolombia.ca">Open in my email</a><button class="btn plain" type="button" id="rCopy">Copy text</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= VISIT ======================= -->
+<section class="view" id="v-visit" aria-label="Visit" hidden>
+  <div class="band">
+    <img src="images/storefront.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <span class="hand">visítanos</span>
+      <h1>Come say hola</h1>
+      <p>Look for the black awning on Bronte Road, a short walk from the harbour.</p>
+      <div class="ctas"><a class="btn gold" href="https://g.page/tasteofcolombiacafe?share" target="_blank" rel="noopener">Get directions</a></div>
+    </div>
+  </div>
+  <div class="ceramic" aria-hidden="true"></div>
+  <div class="wrap page">
+    <div class="visit-grid">
+      <div>
+        <p class="big-addr">67 Bronte Road, Units 2 &amp; 3<br>Oakville, Ontario L6L 3B7</p>
+        <p class="park"><b>Parking:</b> free lot behind the units, with a back entrance straight in. Paid street parking on Bronte Road.</p>
+        <div class="contact">
+          <div><span class="k">Café</span><a href="tel:+12898373021">(289) 837-3021</a><button class="copy" type="button" data-copy="(289) 837-3021">Copy</button></div>
+          <div><span class="k">Yury</span><a href="tel:+14165685707">(416) 568-5707</a><button class="copy" type="button" data-copy="(416) 568-5707">Copy</button></div>
+          <div><span class="k">Email</span><a href="mailto:info@tasteofcolombia.ca">info@tasteofcolombia.ca</a><button class="copy" type="button" data-copy="info@tasteofcolombia.ca">Copy</button></div>
+        </div>
+        <div class="ctas">
+          <a class="btn cobalt" href="https://g.page/tasteofcolombiacafe?share" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn plain" href="https://www.instagram.com/tasteof_colombia/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="hours">
+        <h2>Café hours</h2>
+        <table><tbody id="hoursBody"></tbody></table>
+        <p class="x">Fall 2026 hours. Salsa Night runs Saturdays 6–11 pm in El Salón. Holiday hours are posted on our news page and Instagram.</p>
+      </div>
+    </div>
+    <div class="story">
+      <figure class="pol" style="--r:-2deg"><img src="images/award.jpg" alt="Bronte Impact Awards certificate for Customer Loyalty and Community Favourite" loading="lazy"><figcaption>Community Favourite, 2026</figcaption></figure>
+      <div>
+        <span class="hand">nuestra historia</span>
+        <h2>Coffee, food, music and warm, friendly people</h2>
+        <p>Yury Wu-Parra opened Taste of Colombia in 2012 to share the best of home with Canada. In 2014 we grew into El Salón next door, and it quickly filled up with salsa, Spanish conversation, art and wellness classes.</p>
+        <p>In 2026 our neighbours voted us the Customer Loyalty &amp; Community Favourite at the first Bronte Business Impact Awards. Thank you, Bronte.</p>
+        <p class="sig">¡Te esperamos!</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="ceramic" aria-hidden="true"></div>
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="brand" href="#home"><img src="images/logo-badge.png" alt="" width="46" height="46"><span><span class="n">Taste of Colombia</span><span class="s">café, gift shop &amp; El Salón · Oakville</span></span></a>
+    <nav aria-label="Footer">
+      <a href="#shop">Shop</a><a href="#cafe">Café menu</a><a href="#dance">Dance classes</a><a href="#shop-barista">Barista school</a><a href="#room">Rent El Salón</a><a href="#visit">Visit</a>
+      <a href="https://www.tasteofcolombia.ca/policies/refund-policy" target="_blank" rel="noopener">Returns</a>
+      <a href="https://www.tasteofcolombia.ca/policies/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+    </nav>
+    <p class="credits">Café, class and product photos by Taste of Colombia. Salsa and arepa photos used under CC BY 2.0:
+      <a href="https://www.flickr.com/photos/92205187@N05/8383190618" target="_blank" rel="noopener">Bailaqui Apps</a>,
+      <a href="https://www.flickr.com/photos/51668926@N00/7564732146" target="_blank" rel="noopener">ruffin_ready</a>,
+      <a href="https://www.flickr.com/photos/26216388@N02/2560036078" target="_blank" rel="noopener">Ed Bierman</a>,
+      <a href="https://www.flickr.com/photos/67893781@N00/2574950089" target="_blank" rel="noopener">iangbl</a>,
+      <a href="https://www.flickr.com/photos/48439369@N00/15424480745" target="_blank" rel="noopener">Tim Pierce</a>.</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="hot" href="#shop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9h16v11H4z"/><path d="M9 20v-6h6v6"/></svg>Shop</a>
+  <a href="#dance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Classes</a>
+  <a href="#cafe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9h13v5a6 6 0 0 1-12 0z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v3M12 3v3"/></svg>Menu</a>
+  <button type="button" id="dockCart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Cart<span class="badge" id="dockCount" hidden>0</span></button>
+</nav>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <div class="dhead"><h2 id="cartTitle">Your cart</h2><button type="button" id="cartClose">Close</button></div>
+  <div class="ditems" id="cartItems"></div>
+  <div class="dfoot" id="cartFoot">
+    <div class="sum"><span>Subtotal</span><span id="cartSub">$0.00</span></div>
+    <small>Taxes, pickup and delivery options are shown at checkout.</small>
+    <a class="btn rumba" id="checkout" href="https://www.tasteofcolombia.ca/cart" target="_blank" rel="noopener">Check out securely →</a>
+    <button class="btn plain" type="button" id="keepShopping">Keep shopping</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" hidden><span id="toastMsg"></span><button type="button" id="toastView">View cart</button></div>
+
+<script>
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function money(n){ return '$' + n.toFixed(2); }
+  function tagPrice(n){ return money(n).replace('.00', ''); }
+
+  var STORE = 'https://www.tasteofcolombia.ca';
+
+  // ---------------- Shop catalogue (live Shopify variant IDs) ----------------
+  var GRIND = ['Whole bean', 'Espresso (fine)', 'Drip / pour-over (medium)', 'French press (coarse)'];
+  var P = [
+    {k:'seineken', cat:'coffee', mk:'Birds and Beans · Colombia', n:'Colombia Seineken', d:'Medium roast. Toasty, honey, clean. Brew at ¾ strength.', img:'beans-seineken.jpg', opt:'Grind',
+     v:[[GRIND[0],39469979140267,21],[GRIND[1],39469979173035,21],[GRIND[2],39469979205803,21],[GRIND[3],39469979238571,21]]},
+    {k:'hummingbird', cat:'coffee', mk:'Mountain Gems', n:'Hummingbird Blend', d:'Bright, floral, juicy medium roast. Organic and Fairtrade.', img:'beans-hummingbird.jpg', opt:'Grind',
+     v:[[GRIND[0],39480039506091,23.5],[GRIND[1],39480039538859,23.5],[GRIND[2],39480039571627,23.5],[GRIND[3],39480039604395,23.5]]},
+    {k:'firebat', cat:'coffee', mk:'Firebat · El Salvador', n:'Espresso Blend', d:'Medium-dark. Caramel and chocolate, mellow and sweet.', img:'beans-firebat.jpg', opt:'Grind',
+     v:[[GRIND[0],39438140801195,20.5],[GRIND[1],39437896941739,20.5],[GRIND[2],39437896974507,20.5],[GRIND[3],39437897007275,20.5]]},
+    {k:'guatemala', cat:'coffee', mk:'Birds and Beans · Guatemala', n:'Jacaltenango', d:'Bolder. Chocolate, mandarin orange, caramel.', img:'beans-guatemala.jpg', opt:'Grind',
+     v:[[GRIND[0],39469995819179,20.5],[GRIND[1],39469995851947,20.5],[GRIND[2],39469995884715,20.5],[GRIND[3],39469995917483,20.5]]},
+    {k:'nicaragua', cat:'coffee', mk:'Birds and Beans · Nicaragua', n:'Wood Thrush', d:'Bold. Dark chocolate, plum and a hint of pecan.', img:'beans-nicaragua.jpg', opt:'Grind',
+     v:[[GRIND[0],39475023937707,21],[GRIND[1],39475023970475,21],[GRIND[2],39475024003243,21],[GRIND[3],39475024036011,21]]},
+
+    {k:'giftcard', cat:'gifts', mk:'Regalo', n:'Gift card', d:'Never expires. Good for coffee, beans and El Salón events.', img:'gift-card.jpg', opt:'Amount',
+     v:[['$25',39366077776043,25],['$50',39366077808811,50],['$100',39366077841579,100],['$10',39366077743275,10],['$5',39366077874347,5]]},
+    {k:'v60', cat:'gifts', mk:'Hecho a mano', n:'V60 pour-over', d:'Ceramic dripper. Filters sold separately.', img:'v60.jpg', opt:'Colour',
+     v:[['Red',40377923272875,31.99],['Blue',40378280935595,31.99],['Multicolour',40378306855083,31.99]]},
+    {k:'empanadas', cat:'gifts', mk:'Party tray', n:'30 empanadas', d:'Beef and potato in a corn shell, with ají and cilantro sauce. Pickup only.', img:'empanadas.jpg',
+     v:[['30 pieces',42361365004459,172.5]]},
+    {k:'mug', cat:'gifts', mk:'El Carmen de Viboral', n:'Heart mug, 16 oz', d:'Hand-painted ceramic from Antioquia, Colombia.', img:'mug-heart.jpg', out:true,
+     v:[['16 oz',41317642993835,31.99]]},
+    {k:'book', cat:'gifts', mk:'Libro', n:'The Art and Craft of Coffee', d:'Kevin Sinnott’s friendly guide to choosing, roasting and brewing.', img:'book.jpg', out:true,
+     v:[['Book',39552488767659,34.99]]},
+
+    {k:'dance', cat:'classes', mk:'Wednesdays · 6:30 pm', n:'Dance Essentials', d:'Barre, balance, turns and conditioning with Carolina Vitorino. All levels.', img:'dance-barre-1.jpg',
+     v:[['Drop-in',45171909787819,20]]},
+    {k:'academia', cat:'classes', mk:'Mon, Oct 19 · 7–9 pm', n:'Academia de Manifestación', d:'Monthly workshop in Spanish on habits and discipline.', img:'academia.jpg',
+     v:[['One spot',45160686846123,35]]},
+    {k:'silk', cat:'classes', mk:'Fri, Nov 6 · 6:30–8:30 pm', n:'Silk Painting Workshop', d:'Paint a silk scarf or a framable card with artist Tatiana Dragalin. Materials included.', img:'silk.jpg',
+     v:[['One spot',45083702460587,45]]},
+
+    {k:'l1', cat:'barista', mk:'Level 1 · 8 hours', n:'The Perfect Shot', d:'Origins, grinds, and brewing by drip, French press, AeroPress, Chemex, pour-over and espresso.', img:'pourover.jpg', hst:true,
+     v:[['Course',39272433156267,450]]},
+    {k:'l2', cat:'barista', mk:'Level 2 · 8 hours', n:'The Perfect Milk', d:'Milk for lattes, cappuccinos and macchiatos, plus grinder calibration and troubleshooting.', img:'barista-l2.jpg', hst:true,
+     v:[['Course',39322852360363,475]]},
+    {k:'l3', cat:'barista', mk:'Level 3 · 9 hours', n:'Equipment Care', d:'Keep professional machines and grinders running well and lasting longer.', img:'barista-l3.jpg', hst:true,
+     v:[['Course',39322878476459,550]]}
+  ];
+  var CATS = [
+    {id:'coffee', es:'café en grano', t:'Coffee beans', d:'Organic, shade-grown and freshly roasted. Pick a grind and we prepare it for you.'},
+    {id:'gifts', es:'regalitos', t:'Gifts & treats', d:'Handmade Colombian ceramics, brewing gear, party trays and gift cards.'},
+    {id:'classes', es:'en El Salón', t:'Classes & workshops', d:'Book your spot online. All classes take place in El Salón, next to the café.'},
+    {id:'barista', es:'escuela de baristas', t:'Barista training', d:'Hands-on courses on La Marzocco machines and Mazzer Luigi grinders, each with a certificate. Taken in order, over separate afternoons.'}
+  ];
+  var BYKEY = {}, BYVAR = {};
+  P.forEach(function(p){ BYKEY[p.k] = p; p.v.forEach(function(v){ BYVAR[v[1]] = {p:p, v:v}; }); });
+
+  function cubby(p, i){
+    var rt = [5,-4,7,-6,4][i % 5];
+    var sel = p.v.length > 1
+      ? '<label class="sr" for="opt-' + p.k + '-' + i + '">' + p.opt + '</label><select id="opt-' + p.k + '-' + i + '" data-opt="' + p.k + '">' +
+        p.v.map(function(v){ return '<option value="' + v[1] + '">' + esc((p.opt === 'Amount' ? 'Gift card ' : '') + v[0]) + '</option>'; }).join('') + '</select>'
+      : '';
+    return '<article class="cubby">' +
+      '<span class="ptag' + (p.out ? ' out' : '') + '" style="--rt:' + rt + 'deg" data-price>' + (p.out ? 'agotado' : tagPrice(p.v[0][2])) + '</span>' +
+      '<div class="pic"><img src="images/' + p.img + '" alt="' + esc(p.n) + '" loading="lazy"></div>' +
+      '<span class="mk">' + esc(p.mk) + '</span><h3>' + esc(p.n) + '</h3><p>' + esc(p.d) + (p.hst ? ' Plus HST.' : '') + '</p>' + sel +
+      '<div class="buy">' + (p.out
+        ? '<button class="btn sm" type="button" disabled>Sold out</button>'
+        : '<button class="btn sm" type="button" data-add="' + p.k + '" aria-label="Add ' + esc(p.n) + ' to cart">Add to cart</button>') +
+      '</div></article>';
+  }
+  function fill(grid){
+    // Pad the last row with empty cubbies so the wooden shelf stays whole.
+    grid.querySelectorAll('.cubby.empty').forEach(function(e){ e.remove(); });
+    if (!grid.offsetParent) return;
+    var cols = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
+    var n = grid.querySelectorAll('.cubby').length, extra = (cols - n % cols) % cols;
+    for (var i = 0; i < extra; i++){ var e = document.createElement('div'); e.className = 'cubby empty'; e.setAttribute('aria-hidden','true'); e.innerHTML = '<svg viewBox="0 0 200 200"><use href="#rim"/></svg>'; grid.appendChild(e); }
+  }
+  function fillVisible(){ document.querySelectorAll('.shelf').forEach(fill); }
+  $('homeShelf').innerHTML = ['seineken','hummingbird','v60','giftcard'].map(function(k, i){ return cubby(BYKEY[k], i); }).join('');
+  $('shopBlocks').innerHTML = CATS.map(function(c){
+    var items = P.filter(function(p){ return p.cat === c.id; });
+    return '<section class="cat-block" id="cat-' + c.id + '"><div class="sec-head"><div><span class="hand">' + esc(c.es) + '</span><h2>' + esc(c.t) + '</h2></div><p>' + esc(c.d) + '</p></div>' +
+      '<div class="shelf' + (items.length >= 5 ? ' c5' : items.length === 3 ? ' c3' : '') + '">' + items.map(cubby).join('') + '</div></section>';
+  }).join('');
+  $('cats').innerHTML = CATS.map(function(c){
+    var n = P.filter(function(p){ return p.cat === c.id; }).length;
+    return '<a class="chip" href="#shop-' + c.id + '" data-cat="' + c.id + '">' + esc(c.t) + '<em>' + n + '</em></a>';
+  }).join('');
+  document.addEventListener('change', function(e){
+    if (!e.target.dataset || !e.target.dataset.opt) return;
+    var hit = BYVAR[e.target.value], tag = e.target.closest('.cubby').querySelector('[data-price]');
+    if (hit && tag) tag.textContent = tagPrice(hit.v[2]);
+  });
+
+  // ---------------- Cart ----------------
+  var cart = [];
+  try{ cart = JSON.parse(localStorage.getItem('toc-cart') || '[]').filter(function(i){ return BYVAR[i.v]; }); }catch(e){ cart = []; }
+  function save(){ try{ localStorage.setItem('toc-cart', JSON.stringify(cart)); }catch(e){} }
+  function addToCart(k, scope){
+    var p = BYKEY[k]; if (!p || p.out) return;
+    var vid = p.v[0][1], sel = scope && scope.querySelector('select[data-opt]');
+    if (sel) vid = +sel.value;
+    var line = cart.filter(function(i){ return i.v === vid; })[0];
+    if (line) line.q++; else cart.push({v:vid, q:1});
+    save(); paintCart();
+    var cb = $('cartBtn'); cb.classList.remove('bump'); void cb.offsetWidth; cb.classList.add('bump');
+    toast('Added ' + p.n + (p.v.length > 1 ? ' (' + BYVAR[vid].v[0] + ')' : ''), true);
+  }
+  function paintCart(){
+    var count = cart.reduce(function(s,i){ return s + i.q; }, 0);
+    var sub = cart.reduce(function(s,i){ return s + i.q * BYVAR[i.v].v[2]; }, 0);
+    $('cartCount').textContent = count;
+    $('cartBtn').setAttribute('aria-label', 'Open cart, ' + count + ' item' + (count === 1 ? '' : 's'));
+    $('dockCount').textContent = count; $('dockCount').hidden = !count;
+    $('cartSub').textContent = money(sub);
+    $('cartFoot').hidden = !count;
+    $('checkout').href = STORE + '/cart/' + cart.map(function(i){ return i.v + ':' + i.q; }).join(',');
+    $('cartItems').innerHTML = count ? cart.map(function(i){
+      var h = BYVAR[i.v], p = h.p;
+      return '<div class="citem"><img src="images/' + p.img + '" alt=""><div><b>' + esc(p.n) + '</b><small>' + esc(p.v.length > 1 ? h.v[0] : p.mk) + '</small></div>' +
+        '<div class="r"><span>' + money(h.v[2] * i.q) + '</span><span class="qty"><button type="button" data-q="-1" data-v="' + i.v + '" aria-label="One less ' + esc(p.n) + '">−</button><span>' + i.q + '</span><button type="button" data-q="1" data-v="' + i.v + '" aria-label="One more ' + esc(p.n) + '">+</button></span>' +
+        '<button class="rm" type="button" data-rm="' + i.v + '">Remove</button></div></div>';
+    }).join('') : '<div class="dempty"><span class="hand">Your cart is empty</span><p>Start with a bag of freshly roasted beans.</p><a class="btn rumba" href="#shop-coffee">Shop coffee beans</a></div>';
+  }
+  $('cartItems').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.rm){ cart = cart.filter(function(i){ return i.v !== +b.dataset.rm; }); }
+    else if (b.dataset.q){
+      var line = cart.filter(function(i){ return i.v === +b.dataset.v; })[0];
+      if (line){ line.q += +b.dataset.q; if (line.q < 1) cart = cart.filter(function(i){ return i !== line; }); }
+    }
+    save(); paintCart();
+  });
+  var lastFocus = null;
+  function openCart(){
+    lastFocus = document.activeElement;
+    $('drawer').hidden = false; $('scrim').hidden = false; $('toast').hidden = true;
+    $('cartClose').focus();
+  }
+  function closeCart(){
+    $('drawer').hidden = true; $('scrim').hidden = true;
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  $('cartBtn').addEventListener('click', openCart);
+  $('dockCart').addEventListener('click', openCart);
+  $('toastView').addEventListener('click', openCart);
+  $('cartClose').addEventListener('click', closeCart);
+  $('keepShopping').addEventListener('click', closeCart);
+  $('scrim').addEventListener('click', closeCart);
+  document.addEventListener('keydown', function(e){
+    if ($('drawer').hidden) return;
+    if (e.key === 'Escape') closeCart();
+    if (e.key === 'Tab'){
+      var f = Array.prototype.filter.call($('drawer').querySelectorAll('button, a[href]'), function(x){ return x.offsetParent !== null; });
+      if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]){ e.preventDefault(); f[f.length-1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length-1]){ e.preventDefault(); f[0].focus(); }
+    }
+  });
+
+  function toast(m, withCart){
+    var t = $('toast'); $('toastMsg').textContent = m; $('toastView').hidden = !withCart; t.hidden = false;
+    clearTimeout(toast.t); toast.t = setTimeout(function(){ t.hidden = true; }, 3200);
+  }
+
+  // ---------------- Hours & schedule ----------------
+  var HOURS = {0:null, 1:[8,19], 2:[8,19], 3:[8,19], 4:[8,19], 5:[8,19], 6:[9,22]};   // Fall 2026
+  var DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var DAYS_ES = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  var ASK = 'mailto:info@tasteofcolombia.ca?subject=';
+  var CLASSES = [
+    {d:1, s:19, e:21, n:'Academia de Manifestación', m:'Monthly workshop in Spanish · $35', c:'mind', add:'academia'},
+    {d:2, s:17.5, e:18.5, n:'Kinisi Flow', m:'Movement class', c:'mind'},
+    {d:2, s:19, e:20, n:'Salsa class · On1', m:'Start here if you are new', c:'dance', img:'salsa-couple.jpg'},
+    {d:2, s:20.25, e:21.25, n:'Salsa class · On2', m:'New York style timing', c:'dance', img:'salsa-dip.jpg'},
+    {d:3, s:18.5, e:19.5, n:'Dance Essentials', m:'With Carolina Vitorino · all levels', c:'dance', img:'dance-barre-1.jpg', add:'dance'},
+    {d:3, s:19.5, e:null, n:'Latin Vibes', m:'Latin dance class', c:'dance', img:'salsa-crowd.jpg'},
+    {d:4, s:15, e:17, n:'Spanish Conversation Club', m:'Free · conversational Spanish needed', c:'culture', img:'cups-beans.jpg'},
+    {d:4, s:18, e:21, n:'Tai Chi', m:'Tai chi classes', c:'mind'},
+    {d:5, s:19, e:22, n:'Paint & Sip', m:'Painting night with drinks', c:'culture'},
+    {d:6, s:18, e:23, n:'Salsa Night', m:'$25 · we teach, then everyone dances', c:'dance', img:'salsa-cafe.jpg', link:['Learn the count', '#salsa-night']},
+    {d:0, s:15, e:18, n:'Coselat', m:'Hosted by @coselat · café closed', c:'culture'}
+  ];
+  var FILTERS = [['all','Everything'],['dance','Dance'],['mind','Body & mind'],['culture','Culture & art']];
+  var ART = {dance:'¡baila!', mind:'respira', culture:'¡hola!'};
+
+  function fmt(h){
+    h = ((h % 24) + 24) % 24;
+    var H = Math.floor(h), m = Math.round((h - H) * 60), ap = H >= 12 ? 'pm' : 'am', h12 = H % 12 || 12;
+    return h12 + (m ? ':' + (m < 10 ? '0' : '') + m : '') + ' ' + ap;
+  }
+  function range(s, e){
+    if (e == null) return fmt(s);
+    var a = fmt(s), b = fmt(e);
+    return (a.slice(-2) === b.slice(-2) ? a.slice(0, -3) : a) + '–' + b;
+  }
+  function now(){
+    try{
+      var o = {};
+      new Intl.DateTimeFormat('en-US',{timeZone:'America/Toronto',weekday:'long',hour:'numeric',minute:'numeric',hour12:false})
+        .formatToParts(new Date()).forEach(function(p){ o[p.type] = p.value; });
+      return {d: DAYS.indexOf(o.weekday), h: (parseInt(o.hour,10) % 24) + parseInt(o.minute,10) / 60};
+    }catch(e){ var x = new Date(); return {d:x.getDay(), h:x.getHours() + x.getMinutes() / 60}; }
+  }
+  function cafeStatus(d, h){
+    var r = HOURS[d];
+    if (r && h >= r[0] && h < r[1]) return {open:true, text:'until ' + fmt(r[1])};
+    for (var i = 0; i < 8; i++){
+      var dd = (d + i) % 7, x = HOURS[dd];
+      if (!x || (i === 0 && h >= x[0])) continue;
+      return {open:false, text:'opens ' + (i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAYS[dd]) + ' ' + fmt(x[0])};
+    }
+    return {open:false, text:''};
+  }
+  function paintStatus(){
+    var n = now(), c = cafeStatus(n.d, n.h), r = HOURS[n.d];
+    $('pill').className = 'pill ' + (c.open ? 'open' : 'closed');
+    $('pillText').innerHTML = (c.open ? 'Open' : 'Closed') + '<span class="long"> · ' + esc(c.text) + '</span>';
+    $('tDay').textContent = DAYS[n.d];
+    $('tWhen').textContent = 'Hoy, ' + DAYS_ES[n.d];
+    $('tCafe').textContent = r ? 'Café ' + range(r[0], r[1]) + (c.open ? ' · open now' : '') : 'Café closed today';
+    var ev = CLASSES.filter(function(x){ return x.d === n.d; }).sort(function(a,b){ return a.s - b.s; });
+    $('tEvents').innerHTML = ev.length
+      ? ev.map(function(x){ return '<span class="tchip ev"><b>' + esc(range(x.s, x.e)) + '</b> ' + esc(x.n) + '</span>'; }).join('')
+      : '<span class="tchip">No classes in El Salón today</span>';
+    $('visitToday').textContent = (r ? 'Open today ' + range(r[0], r[1]) + '.' : 'Closed today.') + ' Free parking behind the building.';
+    var html = '';
+    [1,2,3,4,5,6,0].forEach(function(d){
+      var x = HOURS[d];
+      html += '<tr' + (d === n.d ? ' class="today"' : '') + '><td>' + DAYS[d] + (d === n.d ? ' (today)' : '') + '</td><td>' + (x ? range(x[0], x[1]) : 'Closed') + '</td></tr>';
+    });
+    $('hoursBody').innerHTML = html;
+  }
+
+  var fcat = 'all';
+  $('filters').innerHTML = FILTERS.map(function(f){ return '<button type="button" class="chip" data-f="' + f[0] + '">' + f[1] + '</button>'; }).join('');
+  $('filters').addEventListener('click', function(e){ var b = e.target.closest('[data-f]'); if (b){ fcat = b.dataset.f; paintTT(); } });
+  function paintTT(){
+    var today = now().d, html = '';
+    $('filters').querySelectorAll('[data-f]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.f === fcat)); });
+    [1,2,3,4,5,6,0].forEach(function(d){
+      var list = CLASSES.filter(function(c){ return c.d === d && (fcat === 'all' || c.c === fcat); });
+      if (!list.length) return;
+      html += '<div class="tt-day' + (d === today ? ' today' : '') + '"><h3>' + DAYS[d].slice(0,3) + '<small>' + (d === today ? 'today' : DAYS_ES[d]) + '</small></h3><div class="tt-cards">';
+      list.forEach(function(c){
+        var pic = c.img ? '<img class="ph" src="images/' + c.img + '" alt="" loading="lazy">' : '<div class="ph art ' + c.c + '" aria-hidden="true">' + ART[c.c] + '</div>';
+        var act = c.add ? '<button class="act" type="button" data-add="' + c.add + '">Add to cart · ' + tagPrice(BYKEY[c.add].v[0][2]) + '</button>'
+          : c.link ? '<a class="act" href="' + c.link[1] + '">' + c.link[0] + ' →</a>'
+          : '<a class="act" href="' + ASK + encodeURIComponent(c.n + ' in El Salón') + '">Ask about it →</a>';
+        html += '<article class="cls">' + pic + '<div class="b"><time>' + esc(range(c.s, c.e)) + '</time><b>' + esc(c.n) + '</b><span class="m">' + esc(c.m) + '</span>' + act + '</div></article>';
+      });
+      html += '</div></div>';
+    });
+    $('timetable').innerHTML = html || '<p class="tt-empty">No classes of that type this week.</p>';
+  }
+
+  // ---------------- Café menu board ----------------
+  var MENU = [
+    {id:'coffee', t:'Coffee', items:[['Tinto (brewed coffee)','Our drip coffee, the Colombian way'],['Café con leche','Strong coffee, lots of steamed milk'],['Espresso',''],['Macchiato',''],['Americano',''],['Latte',''],['Cappuccino',''],['Mochachino','Espresso, chocolate, steamed milk']]},
+    {id:'other', t:'Not coffee', items:[['Hot chocolate',''],['Chai latte',''],['Matcha latte',''],['Organic tea','Any from the shelf'],['Hot apple cider',''],['Avena','Colombian sweet oat drink'],['Malta','Malt and barley soda'],['Fruit nectars',''],['Lemonade',''],['Iced tea with lemon','']]},
+    {id:'eat', t:'Savoury', items:[['Empanadas','Beef and potato'],['Arepa con queso','Corn patty with cheese'],['Pan de yuca','Warm cheese bread'],['Croissants','Plain, cheese, or guava and cheese'],['Soup of the day','Served with rice'],['Grilled cheese panini','']]},
+    {id:'sweet', t:'Sweets', items:[['Colombian alfajores',''],['Cookies',''],['Scones',''],['Biscotti',''],['Banana or berry loaf',''],['Rice or almond brownies',''],['Almond muffins','Seasonal'],['Tahini oat cookies','Gluten free & vegan','gf'],['Panna cotta','Greek yogurt and blueberries','gf'],['Chia pudding','Gluten free & vegan','gf']]},
+    {id:'bar', t:'Bistro bar', items:[['Carajillo','Spanish coffee with Licor 43'],['Cerveza','Beer'],['Vino','Red or white wine'],['Liqueurs','Baileys, Kahlúa, Sambuca'],['Kavi & Wolfhead','Coffee whiskey']]}
+  ];
+  var tab = 'coffee';
+  $('tabs').innerHTML = MENU.map(function(g){ return '<button type="button" role="tab" id="tab-' + g.id + '" data-tab="' + g.id + '">' + g.t + '</button>'; }).join('');
+  $('tabs').addEventListener('click', function(e){ var b = e.target.closest('[data-tab]'); if (b){ tab = b.dataset.tab; paintMenu(); } });
+  $('tabs').addEventListener('keydown', function(e){
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var i = MENU.findIndex(function(g){ return g.id === tab; });
+    tab = MENU[(i + (e.key === 'ArrowRight' ? 1 : MENU.length - 1)) % MENU.length].id; paintMenu(); $('tab-' + tab).focus();
+  });
+  function paintMenu(){
+    var g = MENU.filter(function(x){ return x.id === tab; })[0];
+    $('tabs').querySelectorAll('[data-tab]').forEach(function(b){ var on = b.dataset.tab === tab; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; });
+    $('menuList').setAttribute('aria-labelledby', 'tab-' + tab);
+    $('menuList').innerHTML = g.items.map(function(it){ return '<li><b>' + esc(it[0]) + (it[2] ? '<span class="gf">GF</span>' : '') + '</b>' + (it[1] ? '<span>' + esc(it[1]) + '</span>' : '') + '</li>'; }).join('');
+  }
+
+  // ---------------- Salsa count ----------------
+  var on = 1;
+  function paintBeats(active){
+    var html = '';
+    for (var i = 1; i <= 8; i++){
+      var rest = i === 4 || i === 8, brk = (on === 1 && (i === 1 || i === 5)) || (on === 2 && (i === 2 || i === 6));
+      html += '<div class="beat' + (rest ? ' rest' : '') + (brk ? ' brk' : '') + (active === i ? ' on' : '') + '"><span class="num">' + i + '</span><span class="lb">' + (rest ? 'pause' : brk ? 'break' : 'step') + '</span></div>';
+    }
+    $('beats').innerHTML = html;
+    $('countText').textContent = on === 1
+      ? 'On1: step on 1-2-3, pause on 4, step on 5-6-7, pause on 8. You change direction (the "break") on 1 and 5. Most people start here.'
+      : 'On2: the same steps, but the break lands on 2 and 6. Smoother and tied to the conga. This is New York style.';
+  }
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click', function(){
+      on = +b.dataset.on;
+      document.querySelectorAll('.seg button').forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+      paintBeats();
+    });
+  });
+  var timer = null;
+  $('playCount').addEventListener('click', function(){
+    var btn = this;
+    if (timer){ clearInterval(timer); timer = null; paintBeats(); btn.textContent = '▶ Play the count'; return; }
+    var i = 0; btn.textContent = '■ Stop';
+    timer = setInterval(function(){
+      i++; paintBeats((i - 1) % 8 + 1);
+      if (i === 16){ clearInterval(timer); timer = null; setTimeout(function(){ paintBeats(); btn.textContent = '▶ Play the count'; }, 380); }
+    }, 360);
+  });
+
+  // ---------------- Room request ----------------
+  $('req').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = $('rName').value.trim(), email = $('rEmail').value.trim(), date = $('rDate').value, err = '';
+    if (!name) err = 'Add your name so we know who to reply to.';
+    else if (!/^\S+@\S+\.\S+$/.test(email)) err = 'Add an email we can reply to, like name@example.com.';
+    else if (!date) err = 'Pick a date. If it is taken we will suggest another.';
+    $('rErr').textContent = err; $('rErr').hidden = !err;
+    if (err) return;
+    var nice = new Date(date + 'T12:00:00').toLocaleDateString('en-CA', {weekday:'long', month:'long', day:'numeric', year:'numeric'});
+    var body = 'Hi Yury,\n\nI would like to rent El Salón.\n\nName: ' + name + '\nEmail: ' + email + '\nDate: ' + nice +
+      '\nLength: ' + $('rHours').value + '\nGuests: ' + ($('rGuests').value || 'Not sure yet') + '\nEvent: ' + $('rType').value +
+      ($('rNotes').value.trim() ? '\nNotes: ' + $('rNotes').value.trim() : '') + '\n\nThank you!';
+    $('rText').textContent = body;
+    $('rMail').href = 'mailto:info@tasteofcolombia.ca?subject=' + encodeURIComponent('El Salón rental: ' + nice) + '&body=' + encodeURIComponent(body);
+    $('rDone').hidden = false;
+  });
+  $('rCopy').addEventListener('click', function(){ copy($('rText').textContent, $('rText')); });
+
+  function selText(el){ try{ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }catch(e){} }
+  function copy(text, el){
+    try{ navigator.clipboard.writeText(text).then(function(){ toast('Copied'); }, function(){ if (el) selText(el); toast('Press Ctrl+C to copy'); }); }
+    catch(e){ if (el) selText(el); toast('Press Ctrl+C to copy'); }
+  }
+  document.querySelectorAll('.copy').forEach(function(b){ b.addEventListener('click', function(){ copy(b.dataset.copy, b.previousElementSibling); }); });
+
+  // ---------------- Pages ----------------
+  var VIEWS = ['home','shop','cafe','dance','room','visit'];
+  var TITLES = {home:'Taste of Colombia', shop:'Shop · Taste of Colombia', cafe:'Café menu · Taste of Colombia', dance:'Dance classes · Taste of Colombia', room:'Rent El Salón · Taste of Colombia', visit:'Visit · Taste of Colombia'};
+  var nav = $('nav'), burger = $('burger');
+  function closeNav(){ nav.classList.remove('show'); burger.setAttribute('aria-expanded','false'); burger.textContent = '☰ Browse'; }
+  function route(hash){
+    var id = (hash || '').replace(/^#/, ''), anchor = null;
+    if (id.indexOf('shop-') === 0){ anchor = 'cat-' + id.slice(5); id = 'shop'; }
+    else if (id === 'school'){ anchor = 'cat-barista'; id = 'shop'; }
+    else if (id === 'salsa-night'){ anchor = 'salsa-night'; id = 'dance'; }
+    if (VIEWS.indexOf(id) < 0) id = 'home';
+    VIEWS.forEach(function(v){ $('v-' + v).hidden = v !== id; });
+    nav.querySelectorAll('a').forEach(function(a){ if (a.dataset.v === id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+    $('cats').querySelectorAll('[data-cat]').forEach(function(a){ if (anchor === 'cat-' + a.dataset.cat) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+    document.title = TITLES[id];
+    closeNav();
+    fillVisible();
+    var t = anchor && $(anchor);
+    if (t) t.scrollIntoView({block:'start'}); else window.scrollTo(0, 0);
+  }
+  document.addEventListener('click', function(e){
+    var add = e.target.closest && e.target.closest('[data-add]');
+    if (add){ addToCart(add.dataset.add, add.closest('.cubby')); return; }
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h === '#main') return;
+    e.preventDefault();
+    if (!$('drawer').hidden) closeCart();
+    try{ history.pushState(null, '', h); }catch(err){}
+    route(h);
+  });
+  window.addEventListener('popstate', function(){ route(location.hash); });
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('show');
+    burger.setAttribute('aria-expanded', String(open)); burger.textContent = open ? '✕ Close' : '☰ Browse';
+  });
+  var rT; window.addEventListener('resize', function(){ clearTimeout(rT); rT = setTimeout(fillVisible, 120); });
+
+  // ---------------- Boot ----------------
+  paintCart(); paintStatus(); paintTT(); paintMenu(); paintBeats();
+  route(location.hash);
+  setInterval(paintStatus, 60000);
+})();
+</script>
